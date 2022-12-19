@@ -1,0 +1,46 @@
+{
+  "name": "smart-vehicle-parking",
+  "version": "1.0.0-alpha",
+  "license": "",
+  "scripts": {
+    "start": "node boodskap-platform-node.js"
+  },
+  "author": {
+    "name": "Saravanan S",
+    "email": "saravanans.design@gmail.com"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^2.3.3",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "express-layout": "^0.1.0",
+    "express-session": "^1.17.1",
+    "line-replace": "^1.0.3",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "mustache": "^4.0.1",
+    "node-schedule": "^1.3.2",
+    "path": "^0.12.7",
+    "properties-reader": "0.0.16",
+    "querystring": "^0.2.0",
+    "randomatic": "^3.1.1",
+    "replace-in-file": "^3.4.4",
+    "request": "^2.88.2",
+    "swagger-ui-express": "^3.0.9",
+    "uglify-es": "^3.3.10",
+    "underscore": "^1.10.2",
+    "user-agent": "^1.0.4",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {}
+}

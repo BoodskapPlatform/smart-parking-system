@@ -1,0 +1,515 @@
+
+.sidewindow{
+    background-color: #828282;
+    color:#fff;
+}
+
+.btnHandle{
+    position: absolute;
+    left: 0px;
+    top: -22px;
+    background-color: #333;
+    border:0px
+
+}
+
+#consoleBox:-webkit-full-screen,
+#consoleBox:-moz-full-screen,
+#consoleBox:-ms-fullscreen,
+#consoleBox:fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.btnHandle:hover, .btnHandle:visited{
+    background-color: #333;
+    border:0px
+}
+
+.consoleBox{
+    background-color: #1f1f1f;
+    color: #fff;
+    font-family: monospace;
+    word-spacing: 2px;
+    padding: 10px;
+    /*height: 175px;*/
+    overflow: auto;
+    overflow-x: hidden;
+    border: 1px solid #eeeeee14;
+
+}
+
+.rulesList{
+    list-style: none;
+    padding-left: 0px;
+    font-size: 11px;
+
+}
+
+.rulesListli{
+    margin: 6px 0px;
+    /*background-color: #eee;*/
+    /*border: 1px solid #ccc;*/
+    padding: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.rulesListli:hover{
+    background-color: #42424287;
+    color:#fff;
+
+}
+
+.domainTab.active{
+    border-bottom: 5px solid #eb974e;
+
+}
+.domainTab a{
+    color:#eb974e !important;
+}
+.domainTab.active a{
+    font-weight: bold;
+}
+.messageTab.active{
+    border-bottom: 5px solid #52b3d9;
+}
+.messageTab a{
+    color:#52b3d9 !important;
+}
+.messageTab.active a{
+    font-weight: bold;
+}
+
+.namedTab.active {
+    border-bottom: 5px solid #be90d4;
+}
+.namedTab a{
+    color:#be90d4 !important;
+}
+.namedTab.active a{
+    font-weight: bold;
+}
+
+.scheduleTab.active{
+    border-bottom: 5px solid #68c3a3;
+}
+.scheduleTab a{
+    color:#68c3a3 !important;
+}
+.scheduleTab.active a{
+    font-weight: bold;
+}
+
+
+.binaryTab.active{
+    border-bottom: 5px solid darkgreen;
+}
+.binaryTab a{
+    color:darkgreen !important;
+}
+.binaryTab.active a{
+    font-weight: bold;
+}
+
+
+
+.fileTab.active{
+    border-bottom: 5px solid #e91e63;
+}
+.fileTab a{
+    color:#e91e63 !important;
+}
+.fileTab.active a{
+    font-weight: bold;
+}
+
+.processTab.active{
+    border-bottom: 5px solid #4caf50;
+}
+.processTab a{
+    color:#4caf50 !important;
+}
+.processTab.active a{
+    font-weight: bold;
+}
+
+
+
+.jobTab.active{
+    border-bottom: 5px solid #be202e;
+}
+.jobTab a{
+    color:#be202e; !important;
+}
+.jobTab.active a{
+    font-weight: bold;
+}
+
+.inputBlock tbody td{
+    word-break: break-all;
+}
+
+
+.sftpTab.active{
+    border-bottom: 5px solid #3f51b5;
+}
+.sftpTab a{
+    color:#3f51b5 !important;
+}
+.sftpTab.active a{
+    font-weight: bold;
+}
+
+
+.mqttTab.active{
+    border-bottom: 5px solid #e91e63;
+}
+.mqttTab a{
+    color:#e91e63 !important;
+}
+.mqttTab.active a{
+    font-weight: bold;
+}
+
+
+.udpTab.active{
+    border-bottom: 5px solid #9c27b0;
+}
+.udpTab a{
+    color:#9c27b0 !important;
+}
+.udpTab.active a{
+    font-weight: bold;
+}
+
+.tcpTab.active{
+    border-bottom: 5px solid #8bc34a;
+}
+.tcpTab a{
+    color:#8bc34a !important;
+}
+.tcpTab.active a{
+    font-weight: bold;
+}
+
+.emailTab.active{
+    border-bottom: 5px solid #009688;
+}
+.emailTab a{
+    color:#009688 !important;
+}
+.emailTab.active a{
+    font-weight: bold;
+}
+
+.microTab.active{
+    border-bottom: 5px solid #607d8b;
+}
+.microTab a{
+    color:#607d8b !important;
+}
+.microTab.active a{
+    font-weight: bold;
+}
+
+.groovyTab.active{
+    border-bottom: 5px solid #348fe2;
+}
+.groovyTab a{
+    color:#348fe2 !important;
+}
+.groovyTab.active a{
+    font-weight: bold;
+}
+
+.jarTab.active{
+    border-bottom: 5px solid #404040;
+}
+.jarTab a{
+    color:#404040 !important;
+}
+.jarTab.active a{
+    font-weight: bold;
+}
+
+
+
+.helpTab.active{
+    background-color: #4caf50;
+    border-bottom: 5px solid #4caf50;
+}
+
+.helpTab.active a{
+    color:#fff !important;
+}
+.helpTab.active a:hover,.helpTab.active a:focus{
+    background-color:#4caf50 !important;
+}
+
+.helpTab a{
+    color:#4caf50 !important;
+}
+.helpTab.active a{
+    font-weight: bold;
+}
+
+.rightSideBar li.active{
+    border-bottom: 5px solid #404040;
+}
+.rightSideBar li a{
+    color:#404040 !important;
+}
+.rightSideBar li.active a{
+    font-weight: bold;
+}
+
+.nav-tabs
+{
+    background : none;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0px solid #ddd;
+}
+
+.loaderSpin{
+    display: inline-block;
+    float:right;
+}
+.ace_tooltip.ace_doc-tooltip{
+    font-size: 13px !important;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    width: 400px;
+}
+
+.ace_content{
+    width: 275px;
+}
+
+.headerTitle{
+    font-family: monospace;position: fixed;width: 100%;text-align: center;font-size: 25px;font-weight: bold;margin-top: 11px;
+    color:#fff;
+}
+
+.rightSide{
+    /*background-color: rgba(183, 178, 178, 0.1) !important;*/
+    overflow: auto;
+}
+.leftSide{
+    /*background-color: rgba(255, 235, 59, 0.13) !important;*/
+}
+.bottomSide{
+    background-color: rgba(44, 46, 36, 0.47) !important;
+    border: 1px solid rgba(187, 187, 187, 0.16) !important;
+}
+
+#codeEditor{
+    font-size:13px;
+}
+
+.cBody li{
+    list-style: none;
+}
+
+.helpHighlight{
+    border: 1px solid #4caf50 !important;
+    border-left: 4px solid #4caf50 !important;
+    border-right:0px !important;
+}
+
+.helpHighlight a{
+    color: #4caf50 !important;
+    font-weight: bold !important;
+}
+
+
+.alternateRow1{
+    background: #b7b7b757 !important;
+}
+.alternateRow2{
+    background: #f4f4f499 !important;
+}
+
+.btnModal{
+    background-color: #009688;
+    color: #fff;
+}
+.btnModal:hover{
+    background-color: #329788cc;
+    color: #fff;
+}
+
+.tree {
+    margin-top: 20px;
+}
+.tree ul {
+    list-style: none;
+    padding-left: 5px;
+}
+.tree ul li {
+    padding-left: 16px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tree ul li:before {
+    content: '';
+    height: 1px;
+    width: 10px;
+    background-color: #9E9E9E;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    margin: auto;
+}
+.tree ul li::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #9E9E9E;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.tree ul li:last-child::after {
+    height: 10px;
+}
+.tree ul a {
+    cursor: pointer;
+    padding-left:5px;
+}
+.tree ul a:hover {
+    color: #9E9E9E;
+    text-decoration: none;
+}
+
+
+
+/*!
+ * bootstrap-vertical-tabs - v1.1.0
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-06-06
+ * Copyright (c) 2014 Ä°smail Demirbilek
+ * License: MIT
+ */
+.tabs-left, .tabs-right {
+    border-bottom: none;
+    padding-top: 2px;
+}
+.tabs-left {
+    border-right: 1px solid #ddd;
+}
+.tabs-right {
+    border-left: 1px solid #ddd;
+}
+.tabs-left>li, .tabs-right>li {
+    float: none;
+    margin-bottom: 2px;
+}
+.tabs-left>li {
+    margin-right: -1px;
+}
+.tabs-right>li {
+    margin-left: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+    border-bottom-color: #ddd;
+    border-right-color: transparent;
+}
+
+.tabs-right>li.active>a,
+.tabs-right>li.active>a:hover,
+.tabs-right>li.active>a:focus {
+    border-bottom: 1px solid #ddd;
+    border-left-color: transparent;
+}
+.tabs-left>li>a {
+    border-radius: 4px 0 0 4px;
+    margin-right: 0;
+    display:block;
+}
+.tabs-right>li>a {
+    border-radius: 0 4px 4px 0;
+    margin-right: 0;
+}
+.vertical-text {
+    margin-top:50px;
+    border: none;
+    position: relative;
+}
+.vertical-text>li {
+    height: 20px;
+    width: 120px;
+    margin-bottom: 100px;
+}
+.vertical-text>li>a {
+    border-bottom: 1px solid #ddd;
+    border-right-color: transparent;
+    text-align: center;
+    border-radius: 4px 4px 0px 0px;
+}
+.vertical-text>li.active>a,
+.vertical-text>li.active>a:hover,
+.vertical-text>li.active>a:focus {
+    border-bottom-color: transparent;
+    border-right-color: #ddd;
+    border-left-color: #ddd;
+}
+.vertical-text.tabs-left {
+    left: -50px;
+}
+.vertical-text.tabs-right {
+    right: -50px;
+}
+.vertical-text.tabs-right>li {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.vertical-text.tabs-left>li {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.card{
+    margin-bottom: 0px;
+    border:1px solid #eee;
+}
+.card-body{
+    padding:5px;
+}
+.card-header {
+    padding: 10px 5px;
+}
+
+.bg-black, .bg-inverse {
+    background-color: #2c2c78!important;
+}
+
+
+#addProcessRule .nav-tabs .nav-item.show .nav-link,#addProcessRule .nav-tabs .nav-link.active {
+    color: #4F5467;
+    font-weight: bold;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff !important;
+}
+#addProcessRule .nav-tabs .nav-link {
+    border: 1px solid transparent !important;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+#addProcessRule .nav li a {
+    padding: 5px 10px;
+    color: #666 !important;
+}
+

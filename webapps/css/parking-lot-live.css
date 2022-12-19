@@ -1,0 +1,95 @@
+.sp-lots {
+  border: 1px solid #c5d1d9;
+  background: #c5d1d9bf;
+  height: 196px;
+  width: 110px;
+  background: #c5d1d9;
+  margin:10px;
+  margin-top:0px;
+  border-radius: 15px;
+  text-align: center;
+}
+.sp-slot-one-area{
+  display: inline-block;
+  vertical-align: top;
+}
+.sp-lots .sp-vehicle-img{
+  height: 190px;
+  transform: rotate(180deg);
+  position: absolute;
+  left: 4px;
+  /* display: none; */
+  z-index: 1;
+}
+.sp-slot-label{
+    padding: 4px 12px;
+    background: #c5d1d9;
+    border-radius: 5px 5px 0px 0px;
+    font-weight: 600;
+    color: #666666;
+    font-size: 12px;
+    width: 80px;
+    margin: 0 auto;
+    text-align: center;
+}
+.sp-lot-no {
+  text-align: center;
+  margin-top: 88%;
+  font-weight: 800;
+}
+.sp-lot-modal-title {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 900;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  border-bottom: 0;
+  padding: 30px 16px 10px;
+  border-bottom: 5px solid #f9690e;
+}
+.sp-not-reporting{
+  color: gray;
+}
+.sp-empty{
+  color: #21af21;
+}
+.sp-occupying{
+  color: #f9690e;
+}
+.park-fence{
+  border: 1px solid #dddddd;
+}
+.sp-inprogress{
+  animation-duration: 0.6s;
+  animation-name: redBoxShadow;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes redBoxShadow {
+  from {
+    background: #c5d1d9;
+    box-shadow: none;
+  }
+
+  to {
+    background: #f59090;
+    box-shadow: 0 0 9px 2px red;
+  }
+}
+.sp-done{
+  animation-duration: 0.6s;
+  animation-name: greenBoxShadow;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+@keyframes greenBoxShadow {
+  from {
+    background: #c5d1d9;
+    box-shadow: none;
+  }
+
+  to {
+    background: #61ac71;
+    box-shadow: 0 0 9px 2px green;
+  }
+}

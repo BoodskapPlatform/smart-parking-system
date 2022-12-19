@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+#statistics {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#statistics .drop-static{
+background: white;
+color: black;
+font-weight: 500;
+border: none;
+border-radius: 10px;
+box-shadow: 0px 0px 4px 0px #8080804d !important;
+}
+
+#statistics .static-contain{
+    background:#f5f5f5;
+}
+#statistics .stat-frame{
+    background: white;
+    border-radius: 10px;
+    padding: 17px;
+    box-shadow:0px 0px 8px 2px #eaeaed !important;
+}
+#statistics .tile{
+  display: flex;
+  justify-content:space-between;
+}
+#statistics .title{
+    font-size: 18px;
+    font-weight: 600;
+    color: #3a3a3a;
+    letter-spacing: .3px;
+}
+#statistics .total-count{
+    vertical-align: text-bottom;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #333333;
+}
+#statistics .stat-ratio{
+    color: #64bf6c;
+    font-weight: 900;
+}
+#statistics .time-period{
+font-size: 12px;
+font-weight:600;
+}
+#statistics .fullcount{
+    font-weight: 600;
+}
+#statistics .logo {
+  border-radius: 50%;
+}
+#statistics .logo i{
+    padding: 10px 10px;
+    font-size: 26px;
+    vertical-align: top;
+    border-radius: 50%;
+}
+#statistics .purplebg {
+    background: #ffeeff;
+}
+#statistics .bluebg {
+    background: #E9F1FF;
+}
+#statistics .orangebg {
+    background: #FFEED8;
+}
+#statistics .pgreenbg {
+    background: #E1FCF4;
+}
+#statistics .red{
+    color: #FF5353;
+}
+#statistics .green{
+    color: #51CA49;
+}
+#statistics .purple{
+    color: #9244d4;
+}
+#statistics .blue{
+    color: #4f78c2;
+}
+#statistics .orange{
+    color: #e4751e;
+}
+#statistics .pgreen{
+    color: #40b894;
+}
+#statistics .mb-20px{
+    margin-bottom: 20px !important; 
+}
+@media(max-width:1355px){
+.fullcount{
+flex: 100%;
+max-width: 100%;
+height: 20px;
+justify-content: left !important;
+}
+#statistics .total-count{
+    font-size: 3rem;
+}
+#statistics .logo i {
+    padding: 6px;
+    font-size: 18px;
+}
+}
+
+/* @media(min-width:725px max-width:280px){
+    .bl-lg{
+        border-left: 1px solid #dfdfdf;
+        }
+    .bb-lg{
+        border-right: 1px dashed #d3d3d380;
+    }
+} */
+@media(max-width:684px){
+
+#statistics .nav-pills .nav-link{
+    font-weight: bolder;
+    font-size: 14px;    
+    color: rgb(23, 23, 23) !important;
+    background: #ffffff !important; 
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px 2px #eaeaed !important;
+ }
+
+}
+@media(min-width:685px){
+    #statistics .nav .nav-link, .nav-pills>li>.nav-link {
+        font-size: 15px;
+        padding: 8px 50px 4px 16px;
+        border-radius: 10px 10px 3px 3px;
+        font-weight: bolder;
+        color: rgb(23, 23, 23) !important;
+        background: #ffffff !important; 
+        box-shadow:0px 0px 8px 2px #eaeaed !important 
+    }
+}
+#statistics .nav-pills .nav-link.active{
+    color: white !important;
+   background: #366cc3 !important;  
+}
+
+
+.row-gap{
+    row-gap: 15px;
+}
+#statistics .p-date{
+    padding: 5px 9px;
+    border: 1px solid lightgrey;
+    font-size: 13px;
+    border-radius: 8px;
+}
+#statistics .btn-refresh{
+    font-size: 14px;
+    color: #188ab8;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #d1cdcd;
+}
+#statistics .table td,#statistics .table th{
+    border: none !important;
+}
+#statistics .table thead{
+   background: #e6f0f4;
+}
+#statistics .table tr{
+    border-bottom: 1px solid rgb(217, 217, 217) !important;
+}
+#statistics #messageListTable_wrapper select.form-control.input-sm{
+    height: 26px !important;
+    border-radius: 6px !important;
+    padding: 3px;
+    width: 50px !important;
+}
+#statistics .paginate_button a{
+    border: 1px solid #cbcaca;
+    padding: 3px 11px;
+}
+
+/* recent */
+#statistics label{
+    font-size: 14px;
+}
+#statistics .pr-1rem{
+    padding-right: 1.5rem;
+}
+#statistics .profile-count{
+    font-size: 18px;
+    font-weight: bold;
+    color: #323232;
+}
+#statistics .contact-tab select{
+    width: 200px;
+}
+#statistics .check-connection{
+    color: #05b805;
+    font-weight: 600;
+}
+#statistics .trash-button{
+    background: white;
+    border: 1px solid #d3d8de;
+    border-radius: 8px;
+    padding: 4px 13px;
+    font-size: 13px;
+    color: darkslategrey;
+}
+#statistics select.form-control:not([size]):not([multiple]) {
+    height: 30px;
+}
+#statistics  .pull-left{
+    float:left!important;
+}
+#statistics .search-left{
+    width: 50%;
+    position: relative;
+    float:left!important;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.search-left .d-inline-flex {
+    width: 100% !important;
+}
+#statistics .search-left input{
+width: 100% !important;
+height: 30px;
+padding: 6px 32px 6px 30px;
+background: #f7fbfd;
+margin: 0 !important;
+border-radius: 12px;
+}
+#statistics .search-left i{
+    font-size: 10px;
+    position: absolute;
+    color: darkgray;
+    left: 18px;
+    top: 10px;
+}
+#statistics .search-btn{
+    height: 30px;
+    position: absolute;
+    right: -6px;
+    border-radius: 12px;
+    padding: 3px 10px;
+    background: #366cc3;
+    color: white;
+    border: none;
+}
+#statistics .appLog{
+width: 100%;
+background: #204260;
+color: white;
+border-radius: 10px;
+padding:12px;
+height: 250px;
+}
+#statistics .search-btn i{
+    position: unset;
+    color: white;
+    font-size: 14px;
+}
+#statistics .sec-head{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 10px;
+}
+#statistics .close :active { 
+    border: none !important;
+}
+#statistics td.details-control {
+    text-align:center;
+    color:rgb(71, 195, 71);
+cursor: pointer;
+}
+#statistics tr.shown td.details-control {
+text-align:center; 
+color:rgb(225, 54, 54);
+} 
+#statistics .inner-row th{
+background:#e6f0f4 !important;
+}
+#statistics .pull-left select{
+    height: 30px !important;
+    width: 90px !important  ;
+}
+
+#statistics .pagination>.active>a{
+    background: rgb(242 242 242 / 75%) !important;
+    color: black !important;
+    border: 1px solid #b4b4b4 !important;
+}
+
+/* SVG progress bar */
+#statistics .skill-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#statistics .skill-container .skill {
+    position: relative;
+}
+
+#statistics .skill-container .skill .outer {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    padding: 20px;
+     box-shadow:inset 6px 6px 10px -1px rgb(132 132 132 / 15%), inset -6px -6px 10px -1px rgb(192 192 192 / 39%);
+    background: #eeeeee;
+}
+
+#statistics .skill-container .skill .outer .inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+        background: #fefefe;
+}
+
+#statistics .skill-container .skill .outer .inner .number {
+    font-weight: 800;
+}
+
+
+#statistics .skill-container .skill:nth-child(1) .outer .inner .number {
+    color: #393939;
+    font-size: 18px;
+}
+
+#statistics circle {
+    fill: none;
+    stroke-width: 18px;
+    stroke-dasharray: 495;
+    stroke-dashoffset: 495;
+    transition: 4s linear;
+}
+
+#statistics svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    rotate: 270deg;
+}
+
+#statistics .skill-container .skill:nth-child(1) circle {
+    stroke: #7811f7;
+}
+#statistics .inner-head{
+font-size: 10px;
+font-weight: 600;
+}
+#statistics .inner-total{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #333333;
+}
+#statistics .active-dev i{
+    color: #580bb7;
+    
+}
+#statistics .active-count{
+    font-size: 25px;
+    font-weight: bold;
+    color: #580bb7;
+}
+#statistics .inactive-count{
+    font-size: 25px;
+    font-weight: bold;
+}
+#statistics .device-functionality{
+    text-align: center;
+}
+#statistics .dev-label{
+    font-weight: 600;
+    color: #6e6e6e;
+}
+#statistics .line-tip{
+    background-color: white;
+    color: black;
+    text-align: center;
+    box-shadow: 0px 0px 4px 0px #650dd0bd;
+    padding: 3px 8px !important;
+    border-radius: 4px;
+}
+#statistics .mini-denot{
+    font-size: 25px;
+}
+#statistics #messageListTable_wrapper select.form-control.input-sm {
+height: 30px !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #statistics .switch-wrapper {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #statistics .switch-wrapper{
+        font-size: 12px;
+    }
+}
+#statistics .switches-container {
+    max-width: 280px;
+}
+/* @media (max-width: 1360px) and (min-width: 1318) {
+    #statistics .switches-container {
+        max-width: 280px;
+    }
+} */
+/* @media  (max-width: 1359)  {
+    #statistics .switches-container {
+        width: 16rem;
+    }
+} */
+@media  (max-width: 1359px)  and (min-width: 685px){
+    #statistics .flex-50 {
+    flex: 50%;
+    max-width: 50%;
+   }
+}
+@media  (max-width: 684px) {
+    #statistics .flex-50 {
+    flex: 100%;
+    max-width: 100%;
+   }
+   #statistics .flex-col {
+    flex-direction: column;
+   }
+   #statistics .w-100 {
+    flex-direction: column;
+   }
+   #statistics .search-left {
+    width: 100% !important;
+   }
+  
+#statistics .nav-pills .nav-item{
+    width: 100%  !important;
+    margin-bottom: 15px;   
+}
+}
+
+@media  (max-width: 575px) {
+.no-border-xs{
+border: none !important;
+}
+.no-border-xs{
+    border: none !important;
+    }
+}
+/* container for all of the switch elements 
+    - adjust "width" to fit the content accordingly 
+*/
+#statistics .switches-container {
+    border: 1px solid rgb(213, 213, 213);
+    position: relative;
+    display: flex;
+    padding: 0;
+    position: relative;
+    background: white;
+    line-height: 30px;
+    border-radius: 8px;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+#statistics .switches-container input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+#statistics .switches-container label {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(63, 63, 63);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+#statistics .switch-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 3;
+    transition: transform .5s cubic-bezier(.77, 0, .175, 1);
+    /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+#statistics .switch {
+    border-radius: 6px;
+    background: #4670be;
+    height: 100%;
+    font-weight: 500;
+}
+
+/* switch box labels
+    - default setup
+    - toggle afterwards based on radio:checked status 
+*/
+#statistics .switch div {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    display: block;
+    font-weight: 600;   
+    color: white ;
+    transition: opacity .2s cubic-bezier(.77, 0, .175, 1) .125s;
+    will-change: opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* slide the switch box from right to left */
+#statistics .switches-container input:nth-of-type(1):checked~.switch-wrapper {
+    transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+#statistics .switches-container input:nth-of-type(2):checked~.switch-wrapper {
+    transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+#statistics .switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {
+    opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+#statistics .switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) {
+    opacity: 1;
+}
+
+#statistics .log-select{
+    padding: 3px 12px;
+    font-size: 13px !important;
+    border-radius: 8px !important;
+}
+
+#statistics .panel-title {
+    font-size: 14px;
+    color: #366cc3;
+}
+
+#scriptTerminal {
+    font-family: 'Share Tech Mono', monospace;
+}
+#statistics .echarts__demo{
+    height:250px;
+    width:100%;
+  }

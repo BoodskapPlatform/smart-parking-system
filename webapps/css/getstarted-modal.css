@@ -1,0 +1,126 @@
+#getStartedModal .number {
+    display: none !important;
+}
+
+#getStartedModal .wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+    background: #f59c1a;
+    color: #fff;
+    cursor: default;
+    text-align: left !important;
+}
+
+#getStartedModal .wizard > .steps .done a, .wizard > .steps .done a:hover, .wizard > .steps .done a:active {
+    background: #f5d6a8;
+    color: #fff;
+}
+
+#getStartedModal .wizard > .actions a, .wizard > .actions a:hover, .wizard > .actions a:active {
+    background: #f59c1a;
+    color: #fff;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#getStartedModal .modal-body {
+    /*height: 85vh;*/
+    /*overflow: auto;*/
+    /*overflow-x: hidden;*/
+}
+
+#getStartedModal .wizard > .content {
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 1px 2px 4px #dddddd;
+    overflow: auto;
+}
+
+#getStartedModal .wizard > .content > .body {
+    /*padding: 0;*/
+    padding-top: 5px;
+}
+
+#getStartedModal #msgDefDetails {
+    background: #f0f0f0;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+}
+
+#getStartedModal .msg-spec-title {
+    color: #464646;
+    font-size: 13px;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    background: #f0f0f0;
+    border-radius: 5px 5px 0 0;
+}
+
+#getStartedModal label {
+    color: #666666;
+}
+
+#getStartedModal .modal-lg {
+    max-width: 980px;
+}
+
+#getStartedModal .gs-step-title {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #464646;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+#getStartedModal .step-cir {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+    background: #666;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 8px;
+    margin-top: 0px;
+    margin-right: 7px;
+}
+
+#getStartedModal .gs-title-head {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#getStartedModal .gs-disp {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#getStartedModal .modal-content {
+    background-color: #f6f6f6;
+}
+
+#getStartedModal .simulationConsole {
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 10px;
+    background: #161616;
+    border-radius: 8px;
+}
+
+#getStartedModal .gs-video-frame{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+#getStartedModal .gs-video-frame-inr{
+    position: absolute;
+    bottom: 0;
+}

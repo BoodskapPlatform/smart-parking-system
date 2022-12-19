@@ -1,0 +1,189 @@
+<style>
+  .priceLabel {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    /* padding-right: 26px; */
+    line-height: 46px;
+    color: #242a30;
+    background-color: #f2f3f5;
+  }
+  .user_profile_name {
+    color: black;
+    font-size: 14px;
+  }
+  .header-style {
+    background: white !important;
+    padding: 2px 38px;
+    box-shadow: 1px 2px 18px #cccccc !important;
+    z-index: 400 !important;
+    border-bottom: 1px solid #dddddd;
+  }
+  @media (max-width: 767px) {
+    .navbar-header {
+      border-bottom: none !important;
+    }
+  }
+  @media (max-width: 426px) {
+    .header-style {
+      background: white !important;
+      padding: 8px 15px !important;
+      box-shadow: 0px 2px 12px 2px #e7eefa !important;
+      z-index: 400 !important;
+    }
+  }
+</style>
+
+<div id="header" class="header header-style">
+  <!-- begin navbar-header -->
+  <div class="navbar-header">
+    <span class="barmenu bskp-bardiv bskp-frame-shadow" onclick="openNav()"
+      ><i class="icon-bars" style="font-size: 19px"></i
+    ></span>
+
+    <a
+      href="javascript:void(0)"
+      class="navbar-brand"
+      style="padding: 2px 5px; width: 130px"
+    >
+      <img
+        src="images/smart-parking.png"
+        style="height: 28px; margin-top: 8px"
+        onclick="openNav()"
+      />
+    </a>
+
+    <button
+      type="button"
+      class="navbar-toggle btn btn-circle btn-danger btn-sm btnMobile"
+      onclick="logout()"
+    >
+      <i class="icon-sign-out"></i>
+    </button>
+
+    <a
+      class="navbar-toggle btn btn-circle btn-warning btn-sm btnMobile"
+      style="right: 20px"
+      href="<%= basepath %>/profile"
+    >
+      <i class="icon-user"></i>
+    </a>
+  </div>
+  <!-- end navbar-header -->
+
+  <ul class="navbar-nav navbar-right hidden-xs hidden">
+    <li class="verticalsolutions"></li>
+    <li class="dropdown menulink">
+      <a
+        href="javascript:;"
+        data-toggle="dropdown"
+        style="padding: 5px"
+        class="dropdown-toggle f-s-14 bskp-frame-shadow"
+      >
+        <!-- <i class="fa fa-bell"></i> -->
+        <img src="images/bell.svg" class="bskp-w-18px" alt="" />
+        <!--<span class="label">5</span>-->
+      </a>
+      <ul class="dropdown-menu media-list dropdown-menu-right hide">
+        <li class="dropdown-header">NOTIFICATIONS (5)</li>
+        <li class="media">
+          <a href="javascript:;">
+            <div class="media-left">
+              <i class="fa fa-bug media-object bg-silver-darker"></i>
+            </div>
+            <div class="media-body">
+              <h6 class="media-heading">
+                Server Error Reports
+                <i class="fa fa-exclamation-circle text-danger"></i>
+              </h6>
+              <div class="text-muted f-s-11">3 minutes ago</div>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a href="javascript:;">
+            <div class="media-left">
+              <i class="fa fa-plus media-object bg-silver-darker"></i>
+            </div>
+            <div class="media-body">
+              <h6 class="media-heading">New User Registered</h6>
+              <div class="text-muted f-s-11">1 hour ago</div>
+            </div>
+          </a>
+        </li>
+        <li class="media">
+          <a href="javascript:;">
+            <div class="media-left">
+              <i class="fa fa-envelope media-object bg-silver-darker"></i>
+              <i
+                class="fab fa-google text-warning media-object-icon f-s-14"
+              ></i>
+            </div>
+            <div class="media-body">
+              <h6 class="media-heading">New Email From John</h6>
+              <div class="text-muted f-s-11">2 hour ago</div>
+            </div>
+          </a>
+        </li>
+        <li class="dropdown-footer text-center">
+          <a href="javascript:;">View more</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="dropdown navbar-user mr-3">
+      <a
+        href="javascript:;"
+        class="dropdown-toggle"
+        style="padding: 15px 2px"
+        data-toggle="dropdown"
+      >
+        <img src="" alt="" class="user_profile_picture" />
+        <span class="d-none d-md-inline"></span
+        ><span class="user_profile_name"></span> <b class="caret"></b>
+      </a>
+      <div
+        class="dropdown-menu dropdown-menu-right"
+        style="border-top: 0px; padding-top: 0px"
+      >
+        <div
+          class="userRoles menulink"
+          style="padding: 5px; text-transform: capitalize; color: #fff;background-color: rgb(248 105 15);"
+        ></div>
+        <a href="<%= basepath %>/profile" class="dropdown-item"
+          ><i class="icon-edit2"></i> Edit Profile</a
+        >
+        <!--<a href="<%= basepath %>/myaccount" class="dropdown-item">My Account</a>-->
+        <a href="<%= basepath %>/domain" class="dropdown-item menulink"
+          ><i class="icon-globe"></i> Domain Settings</a
+        >
+        <a href="#" class="dropdown-item menulink"
+          ><i class="icon-question-circle"></i> Help & Support</a
+        >
+        <div class="dropdown-divider"></div>
+        <a href="javascript:;" class="dropdown-item" onclick="logout()"
+          ><i class="icon-sign-out"></i> Log Out</a
+        >
+      </div>
+    </li>
+
+    <li class="menulink" title="Live Data">
+      <a
+        href="javascript:;"
+        class="f-s-14 bskp-frame-shadow"
+        style="padding: 5px 5px"
+        onclick="showLiveNotification()"
+      >
+        <!-- <i class="icon-bolt iconLiveStatus"></i> -->
+        <img src="images/bolt.svg" class="iconLiveStatus bskp-w-18px" alt="" />
+      </a>
+    </li>
+  </ul>
+  <!-- end header navigation right -->
+</div>
+
+<script src="controllers/common.js" type="text/javascript"></script>
+<script src="controllers/home.js" type="text/javascript"></script>
+
+<% include right-sidebar.html %>

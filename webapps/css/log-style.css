@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 14px;
+}
+
+.content-background {
+  background-image: url("images/login-bg.jpg");
+  background-size: cover;
+}
+.sub-image {
+  position: relative;
+  width: 100px;
+  left: 295px;
+  top: 100px;
+}
+.sub-image1 {
+  /* background-image: url("../images/3D_Sphere_2.png"); */
+  position: absolute;
+  width: 100px;
+  top: 620px;
+  left: 10px;
+}
+.sub-image2 {
+  width: 1000px;
+  position: absolute;
+  top: 200px;
+  left: 460px;
+}
+.box {
+  position: relative;
+  background: rgb(96 124 193 / 50%);
+  color: #fff;
+  width: 275px;
+  top: 5px;
+  left: 39px;
+  padding: 19px;
+  border: 1px solid rgb(142 142 244);
+  border-radius: 14px;
+}
+/* .box1{
+    background: rgba(82, 110, 180, .5);
+    color: #ffffff;
+    opacity: .5;
+} */
+.anchor-text {
+  text-decoration: none;
+  color: #000000;
+}
+.log-head {
+  color: #f9690e;
+  font-weight: 600;
+  font-size: 25px;
+}
+.caption-text {
+  font-size: 12px;
+  line-height: 1;
+}
+.wrap-input {
+  width: 100%;
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 37px;
+}
+input {
+  outline: none;
+  border: none;
+  font-weight: 600;
+}
+::-webkit-input-placeholder {
+  font-weight: 500;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-weight: 500;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-weight: 500;
+}
+:-ms-input-placeholder {
+  font-weight: 500;
+}
+.text-size {
+  font-size: 14px;
+  font-weight: 600;
+}
+.input-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  border: none !important;
+  border-bottom: 2px solid rgb(195 194 194) !important;
+  display: block;
+  width: 100%;
+  background: 0 0;
+}
+.loginput {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: 0;
+  pointer-events: none;
+}
+.icon-position {
+  position: absolute;
+  top: -23px;
+  right: 0px;
+}
+.leftside-head {
+  font-size: 35 !important ;
+  font-weight: 700 !important;
+}
+
+.text-color {
+  color: #f9690e;
+}
+/* button:hover{
+    color: #fff;
+} */
+.login-ref {
+  font-size: 12px;
+}
+.hover-text {
+  color: #fff;
+}
+.btn-background {
+  background-color: #f9690e;
+  color: #ffffff !important;
+  padding: 9px !important;
+}
+.btn-background:hover {
+  /* background-color: #7171b9; */
+  color: #fff;
+}
+.btn-size {
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+.btn-outline {
+  border: 2px solid #f9690e;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btnsecondary {
+  color: #f9690e;
+  font-weight: 600 !important;
+}
+.btn-outline:hover {
+  background-color: #f9690e;
+}
+/* .btn-outline > a:hover{
+    color: #fff;
+
+} */
+.backlogin:hover {
+  color: white;
+}
+.show-eye {
+  background-image: url("images/show.png");
+}
+.hide-eye {
+  background-image: url("images/hide.png");
+}
+/* @media (max-width:500px){
+    .sub-image2{
+        width: 500px;
+    }
+} */
+
+.thm-txt {
+  color: #f9690e;
+}
+
+.logo-txt {
+  background: #ffffffdb;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.overlay-txt-bg {
+  background: #00000082;
+  padding-bottom: 40px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

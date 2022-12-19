@@ -1,0 +1,26 @@
+<style>
+    .sidebar .nav li a:hover{
+        text-decoration: underline;
+    }
+    .sidebar .nav>li.active>a, .sidebar .nav>li.active>a:focus, .sidebar .nav>li.active>a:hover {
+        background: transparent;
+    }
+    li.nav-header  {
+        color: #f9690e !important;
+    }
+    .sidebar .nav>li.nav-header {
+        font-size: 12px;
+    }
+</style>
+<div id="mySidenav" class="sidenav bskp-sidenav" style="box-shadow: 0.5px 0.5px 8px #dddddd;background-color:white;border-right: 1px solid #dddddd;">
+    <div class="sidebar" style="width: 250px;">
+        <ul class="nav" style="margin-bottom: 50px">
+            <li class="has-sub active sideMain homeMenu">
+                <a href="<%= basepath %>/home">
+                    <i class="fa fa-tachometer"></i>
+                    <span>Live Dashboard</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

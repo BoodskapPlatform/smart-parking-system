@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#getstartedmodal {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#getstartedmodal .list-style {
+    list-style: none;
+}
+
+#getstartedmodal .gy-20 {
+    row-gap: 16px;
+}
+
+#getstartedmodal .left-sec {
+    width: 400px;
+}
+
+#getstartedmodal .active {
+    padding: 11px 0px 11px 11px;
+    color: black;
+    font-weight: 900;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 1px 11px 0px #5a5a5a24;
+}
+
+#getstartedmodal .step-procedure {
+    color: #9e9f9f;
+    font-weight: 500;
+}
+
+#getstartedmodal .px-35 {
+    padding: 0px 25px 0px 7px;
+}
+
+#getstartedmodal .content-head {
+    color: black;
+}
+
+#getstartedmodal .roadmap-info {
+    color: #424342;
+}
+
+#getstartedmodal .fw-900 {
+    font-weight: 900;
+}
+
+#getstartedmodal .fs-18 {
+    font-size: 18px;
+   
+}
+
+#getstartedmodal .fs-14 {
+    font-size: 14px;
+}
+
+#getstartedmodal #mesgDefine input, textarea, select {
+    border-radius: 10px !important;
+    font-size: 14px !important;
+    color: #2a2a2a;
+    font-weight: 600;
+}
+
+#getstartedmodal label {
+    color: #171717;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#getstartedmodal #mesgDefine textarea {
+    min-height: 90px;
+}
+
+#getstartedmodal #mesgDefine {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 9px 0px #5a5a5a24;
+}
+
+#getstartedmodal .text-grey {
+    color: rgb(87, 87, 87) !important;
+}
+
+#getstartedmodal #mesgDefine ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(87, 87, 87) !important;
+    font-size: 14px !important;
+    opacity: .5 !important;
+}
+
+#getstartedmodal #mesgDefine :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(87, 87, 87);
+}
+
+#getstartedmodal thead {
+    background: #ebf0f7;
+}
+
+#getstartedmodal table.dataTable.no-footer {
+    border-bottom: none;
+}
+
+#getstartedmodal table.dataTable thead > tr > th.sorting:after, table.dataTable thead > tr > th.sorting:before {
+    display: none !important;
+}
+
+#getstartedmodal .modal-header {
+    border-radius: 18px 18px 18px 18px;
+    background: white !important;
+    box-shadow: 0px 1px 13px 0px #8383833d;
+}
+
+#getstartedmodal .modal-header h3 {
+    color: #3a3a3a !important;
+}
+
+#getstartedmodal .modal-body {
+    border-radius: 18px;
+}
+
+#getstartedmodal .logo-img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+#getstartedmodal button {
+    font-weight: 600;
+}
+
+#getstartedmodal button:hover {
+    opacity: .9;
+    cursor: pointer;
+    border: none;
+}
+
+#getstartedmodal button i {
+    font-weight: 600;
+    padding: 0px 3px;
+    font-size: 15px;
+}
+
+#getstartedmodal .btn-skip {
+    background: #90a1b7;
+    border: none;
+    border-radius: 10px;
+    font-size: 14PX;
+    padding: 5.5px 30px;
+}
+
+#getstartedmodal .btn-simulate {
+    background: #db0e37 !important;
+}
+
+
+#getstartedmodal .StepProgress {
+    position: relative;
+    padding-left: 68px;
+    list-style: none;
+    color: #898989;
+    font-weight: 600;
+}
+
+#getstartedmodal .StepProgress::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 10px;
+    height: 100%;
+}
+
+#getstartedmodal .StepProgress-item {
+    position: relative;
+    padding-left: 18px;
+    margin: 10px 0px;
+}
+
+/* #getstartedmodal .StepProgress-item:not(:first-child) {
+    padding-top: 13px; 
+} */
+#getstartedmodal .StepProgress-item:not(:last-child) {
+    padding-bottom: 24px;
+}
+
+#getstartedmodal .StepProgress-item:last-child::before { /* remove the extra line */
+    height: 1%;
+}
+
+#getstartedmodal .StepProgress-item::before {
+    display: inline-block;
+    content: '';
+    top: 10px;
+    position: absolute;
+    left: -29px;
+    height: 100%;
+    width: 10px;
+}
+
+#getstartedmodal .StepProgress-item::after {
+    content: '';
+    background-color: #FFF;
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: -37px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #CCC;
+    border-radius: 50%;
+
+}
+
+#getstartedmodal .StepProgress-item.landmark::before {
+
+    border-left: 3px dashed #cce6f3;
+}
+
+#getstartedmodal .StepProgress-item.landmark::after {
+    content: "";
+    font-size: 13px;
+    text-align: center;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: #cce6f3;
+    box-shadow: 0px 1px 5px 1px #a5a5a5ab;
+}
+
+#getstartedmodal .StepProgress-item.active-dot::after {
+    padding-top: 1px;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+    left: -37px;
+    font-size: 13px;
+    text-align: center;
+    border: 4px solid #ffffff;
+    background-color: #2d2f79;
+    box-shadow: 0px 1px 5px 1px #a5a5a5ab;
+}
+
+#getstartedmodal .active-dot {
+    color: #000 !important;
+    cursor: pointer !important;
+}
+
+#getstartedmodal .StepProgress strong {
+    display: block;
+}
+
+#getstartedmodal .step-dot {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    text-align: center;
+    border: 4px solid #ffffff;
+    background-color: #2d2f79;
+    box-shadow: 0px 1px 5px 1px #a5a5a5ab;
+}
+
+#getstartedmodal .btn-proceed {
+    background-color: #2d2f79;
+    border-radius: 10px;
+    border: none;
+    padding: 5.5px 30px;
+}
+
+#getstartedmodal .btn-previous {
+    background-color: #90a1b7;
+    border-radius: 23px;
+    border: none;
+    padding: 5px 30px;
+}
+
+#getstartedmodal td {
+    padding: 10px 0px;
+    vertical-align: top;
+}
+
+#getstartedmodal th {
+    padding: 6px;
+    font-size: 16px;
+}
+
+#getstartedmodal .action-cell {
+    width: 100px;
+}
+
+#getstartedmodal td .row {
+    justify-content: center;
+}
+
+#getstartedmodal th:first-child {
+    border-radius: 7px 0px 0px 7px;
+    padding-left: 21px;
+}
+
+#getstartedmodal th:last-child {
+    border-radius: 0px 7px 7px 0px;
+    padding-right: 16px;
+}
+
+#getstartedmodal .check {
+    font-size: 10px;
+    background: #40bf5b;
+    color: white;
+    padding: 2px 3px;
+    border-radius: 1rem;
+
+}
+
+#getstartedmodal .check {
+    display: none;
+}
+
+#getstartedmodal .is-done > .check {
+    display: initial;
+}
+
+#getstartedmodal .active-step {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    margin: -10px 0px;
+    z-index: 5;
+    padding: 11px 0px 11px 11px;
+    color: black;
+    font-weight: 900;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 1px 9px 1px #a5a5a559;
+}
+
+#getstartedmodal .spot i {
+    font-size: 14px;
+    color: #2d2f79;
+    text-align: center;
+    padding: 0px 0px 0px 5px;
+    vertical-align: 1px;
+}
+
+#getstartedmodal .spot {
+    margin: 0px 34px 0px 19px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px 0px #808080a8;
+}
+
+#getstartedmodal .landmark > #text {
+    visibility: hidden;
+}
+
+#getstartedmodal .addrow-icon {
+    font-size: 25px;
+    color: #488ecc;
+}
+
+
+#getstartedmodal .simulate td {
+    padding: 11px 6px !important;
+}
+
+#getstartedmodal .simulate tbody {
+    font-size: 15px !important;
+    color: rgb(35, 35, 35);
+}
+
+#getstartedmodal .lang-tag {
+    font-weight: 500;
+    color: black;
+    background: #e7f5f2;
+    text-align: center;
+    padding: 4px 18px;
+    border-radius: 5px;
+}
+
+#getstartedmodal .fs-13 {
+    font-size: 13px;
+}
+
+#getstartedmodal .sub-sec {
+    font-size: 16px;
+    color: #484848;
+    font-weight: 600;
+}
+
+#getstartedmodal .text-lite {
+    color: #959595 !important;
+    font-style: italic !important;
+    padding-top: 7px;
+}
+
+#getstartedmodal .livelog-bg {
+    height: 250px;
+    border-radius: 10px;
+    overflow: auto;
+    border-top: 1px solid #eee;
+    background-color: #00263E;
+}
+
+#getstartedmodal .livelog-text {
+    padding: 20px;
+}
+
+#getstartedmodal .livelog-text p {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#getstartedmodal .form-control {
+    padding: 5px 12px !important;
+}
+#getstartedmodal .active-dot {
+cursor: pointer;
+}
+#getstartedmodal .row-gap{
+    row-gap: 15px
+}
+#getstartedmodal #msgDefDetails {
+width: 100%;
+background: #f0f0f0;
+padding: 15px 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+border: 1px solid #dddddd;
+}
+#getstartedmodal .msg-spec-title {
+color: #464646;
+font-size: 13px;
+padding: 12px 10px;
+margin-bottom: 5px;
+background: #f0f0f0;
+border-radius: 5px 5px 0 0;
+}
+#getstartedmodal  button[disabled]{
+opacity: .6;
+}
+#getstartedmodal .modal-dialog {
+    min-height: calc(100vh - 60px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+#getstartedmodal .modal-dialog {
+    max-width: 75%;
+    margin: 1.75rem auto;
+}
+#getstartedmodal .d-xs-show{
+    display: none;
+    }
+#getstartedmodal .footer {
+    position: absolute;
+    padding: 0px 30px;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    height: unset;
+    border: none !important;
+    border-radius: 1rem !important;
+    background-color: #ffffff !important;
+    width: 100%;
+}
+#getstartedmodal .mr-33px {
+    margin-right: 33px;
+}
+.bskp-getmodal .add {
+    background: #2d2f79;
+    padding: 5px 7px;
+    color: white;
+    border-radius: 50%;
+    vertical-align: text-bottom;
+    font-size: 15px;
+}
+.bskp-getmodal .minus {
+    background: #90a1b7;
+    padding: 7px 8px;
+    color: white;
+    border-radius: 50%;
+    vertical-align: text-bottom ;
+}
+.minus-none{
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    #getstartedmodal .modal-dialog {
+        max-width: 96%;
+        margin: 1.75rem auto;
+    }
+    #getstartedmodal .mesgDefine {
+        max-width: 585px !important;
+    }
+    #getstartedmodal .mr-33px {
+        margin-right: 0px;
+    }
+}
+@media(max-width: 862px) {
+    #getstartedmodal  .modal-dialog {
+    min-height: calc(100vh - 20px) !important;
+    }
+    #getstartedmodal .mr-xs-none{
+    margin-right: 0px !important;
+    }
+    #getstartedmodal .col-xs-12{
+    flex-basis: unset;
+    }
+    #getstartedmodal .d-xs-none{
+       display: none;
+        }
+    #getstartedmodal .footer {
+        position: unset;
+        padding: 0px 30px;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        height: unset;
+        border: none !important;
+        border-radius: 1rem !important;
+        background-color: #ffffff !important;
+        width: 100%;
+    }
+    #getstartedmodal .d-xs-show{
+        display:block;
+        }
+}
+
+@media(max-width: 451px) {
+    #getstartedmodal  .w-xs-100 {
+       width:100% !important;
+       margin-bottom: 10px !important;
+        }
+}
+
+@media(max-width:420px) {
+    #getstartedmodal  .fs-18 {
+    font-size: 14px !important;
+    }
+    #getstartedmodal label {
+        color: #5b5b5b;
+        font-weight: 600;
+        font-size: 12px;
+    }
+    #getstartedmodal .fs-14 {
+        font-size: 12px;
+    }
+    #getstartedmodal th {
+        padding: 6px;
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    #getstartedmodal .StepProgress {
+        position: relative;
+        padding-left: 35px;
+        list-style: none;
+        color: #898989;
+        font-weight: 600;
+    }
+    #getstartedmodal .left-sec {
+        width: 450px;
+    }
+    #getstartedmodal .px-35 {
+        padding: 0px 25px 0px 7px;
+    }
+    #getstartedmodal .active-step {
+        position: absolute;
+        width: 270px;
+        left: -20px;
+        margin: -10px 0px;
+        z-index: 5;
+        padding: 11px 0px 11px 11px;
+        color: black;
+        font-weight: 900;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0px 1px 9px 1px #a5a5a559;
+    }
+    #getstartedmodal .spot {
+        margin: 0px 30px 0px 6px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 6px 0px #808080a8;
+    }
+    .wrapper {
+        padding: 10px 0px 25px 16px;
+    }
+    #getstartedmodal .StepProgress-item {
+        position: relative;
+        padding-left: 12px;
+        margin: 10px 0px;
+    }
+}

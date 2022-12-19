@@ -1,0 +1,81 @@
+<style>
+
+    .rightSideBarPanel {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        z-index: 3;
+        background: #fff;
+        display: none;
+        width: 25%;
+        border: 1px dotted #ccc;
+        padding-top: 47px;
+        padding-top: 47px;
+    }
+
+    .liveLogger {
+        list-style: none;
+        padding: 0px;
+        margin-top: 5px;
+    }
+
+    .liveLogger li {
+        padding: 5px;
+        background-color: #eeeeee85;
+        margin: 5px 0px;
+    }
+
+    .loggerWrapper {
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .codeStyle{
+        font-family:"Courier New",monospace;
+        font-size:11px;
+        word-break: break-all;
+        white-space: pre-wrap;
+        text-align: left;
+        clear:both
+    }
+</style>
+<div class="rightSideBarPanel">
+
+    <p style="padding: 10px;margin-bottom: 0px;background-color: #eee;text-align: right">
+
+        <span style="float:left;display: inline-block;cursor: pointer" onclick="clearTextData()"><i class="icon-times"></i> clear</span>
+
+        <label><input type="checkbox" value="ON" id="liveUpdateGlobal" onchange="liveUpdateGlobal(this)" /> Enable Live Update</label>
+    </p>
+
+    <span class="serverStatus" style=""></span>
+
+    <!--<label class="pull-right" style="margin-top: 5px;">-->
+        <!--<input type="checkbox" id="notificationSound" /> Enable Sound-->
+    <!--</label>-->
+
+    <div class="loggerWrapper" style="clear: both">
+        <p  style="text-align: center" class="liveMsg"><small >Live Message will be updated here!</small></p>
+        <ul class="liveLogger">
+
+            <!--<li>
+                <p>
+                    <label class="pull-left"><small>Device ID</small>: <b>12346132561</b></label>
+                    <label class="pull-right"><small>Message ID</small>: <b>234</b></label>
+                </p>
+
+                <pre style="white-space: pre-wrap">
+
+                </pre>
+            </li>-->
+        </ul>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $(".loggerWrapper").css('height', ($(window).height() - 110) + 'px')
+    });
+</script>

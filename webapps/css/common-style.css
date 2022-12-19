@@ -1,0 +1,20 @@
+.btn-rect{
+    width: 60px !important;
+}
+
+.shareIcon{
+    color: #000 !important;
+} 
+
+.shareIcon:hover{
+    color: #4caf50 !important;
+} 
+
+.tagEllipseMargin{
+    margin-left: -7px !important;
+}
+
+#userTable td.details-control {
+    outline:none !important;
+}
+  

@@ -1,0 +1,1147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* ------- Header -------*/
+.bskp-frame-shadow {
+  /* padding: 4px 5px; */
+  background: white;
+  border-radius: 6px;
+  font-size: 16px;
+  /* color: #5a95cbbd; */
+  /* box-shadow: 0px 0px 2px 2px #e5e9f1; */
+  margin-top: 10px;
+  margin-right: 1rem !important;
+}
+
+.bskp-select-pad {
+  padding: 3px 8px !important;
+  font-size: 14px;
+  color: #373737;
+  font-weight: 500;
+}
+
+.goog-te-gadget-simple {
+  border: none !important;
+}
+
+.bskp-bardiv {
+  padding: 4px 6px 0px 6px;
+  color: #373d4685 !important;
+  position: unset !important;
+  float: left;
+}
+
+.bskp-w-18px {
+  width: 18px;
+}
+
+.bskp-w-16px {
+  width: 16px;
+}
+
+/* container for all of the switch elements 
+    - adjust "width" to fit the content accordingly 
+*/
+.bskp-lightmode-container {
+  border: 1px solid rgb(213, 213, 213);
+  position: relative;
+  display: flex;
+  padding: 0;
+  position: relative;
+  background: white;
+  line-height: 28px;
+  border-radius: 8px;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.bskp-lightmode-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.bskp-lightmode-container label {
+  width: 50%;
+  padding: 0px 7px;
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(63, 63, 63);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+.bskp-switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 3;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.bskp-tog-switch {
+  border-radius: 6px;
+  height: 100%;
+  background: linear-gradient(
+    157deg,
+    rgba(209, 188, 2, 1) 0%,
+    rgba(239, 175, 20, 1) 43%,
+    rgba(249, 157, 35, 1) 100%
+  );
+  /* background: linear-gradient(157deg, rgba(218,218,218,1) 0%, rgba(126,126,126,1) 43%, rgba(27,27,27,1) 100%); */
+  font-weight: 500;
+}
+
+/* switch box labels
+    - default setup
+    - toggle afterwards based on radio:checked status 
+*/
+
+.bskp-tog-switch div {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  font-weight: 600;
+  color: white;
+  transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
+  will-change: opacity;
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+
+/* slide the switch box from right to left */
+.bskp-lightmode-container input:nth-of-type(1):checked ~ .bskp-switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.bskp-lightmode-container input:nth-of-type(2):checked ~ .bskp-switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.bskp-lightmode-container
+  input:nth-of-type(1):checked
+  ~ .bskp-switch-wrapper
+  .bskp-tog-switch
+  div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.bskp-lightmode-container
+  input:nth-of-type(2):checked
+  ~ .bskp-switch-wrapper
+  .bskp-tog-switch
+  div:nth-of-type(2) {
+  opacity: 1;
+}
+
+/* ------- Header ends-------*/
+.bskp-dash-head h1 {
+  font-weight: 600;
+  color: darkslategrey;
+}
+
+.bskp-dash-search input {
+  width: 400px !important;
+  height: 34px;
+  padding: 6px 32px 6px 30px;
+  background: white;
+  margin: 0 !important;
+  border-radius: 12px;
+}
+
+.bskp-dash-search i {
+  font-size: 14px;
+  position: absolute;
+  color: darkgray;
+  left: 18px;
+  top: 10px;
+}
+
+.bskp-dash-head {
+  margin: 20px 25px 6px 25px !important;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ------- Homepage Start-------*/
+
+.bskp-home-modules {
+  background-color: white;
+  display: flex;
+  border: 1px solid #f1eded;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 3px 1px #ededed;
+}
+
+.bskp-home-modules p {
+  margin: 0px;
+  vertical-align: middle;
+}
+
+.bskp-home-modules label {
+  font-weight: 600;
+  white-space: pre-line;
+  margin-left: 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bskp-home-modules:hover {
+  background-color: #f2f6ff;
+  border: 1px solid #cccdeeca;
+  cursor: pointer;
+}
+.bskp-home-modules:hover label {
+  color: #f9690e;
+}
+.bskp-home-modules:hover .bskp-icon-frame {
+  background: #f9690e;
+  border: 1px solid #c0c3e8;
+}
+.bskp-home-modules img {
+  width: auto;
+  height: 42px;
+}
+
+.bskp-icon-frame {
+  background: #f2f6ff;
+  border: 1px solid #d2dfec;
+  border-radius: 50%;
+  padding: 8px;
+}
+.bskp-rightpanel .panel-body > ul > li {
+  margin-bottom: 12px !important;
+  padding-left: 8px;
+}
+.bskp-rightpanel .panel-heading,
+.bskp-rightpanel .panel-body {
+  box-shadow: -1px 0px 8px 1px #cedeeccf;
+}
+.bskp-rightpanel .panel-body {
+  border-right: 1px solid #dddddd !important;
+  border-bottom: 1px solid #dddddd !important;
+  border-left: 1px solid #dddddd !important;
+}
+.bskp-rightpanel .panel-heading {
+  background-color: rgb(234 240 252) !important;
+  color: #6d6d6d !important;
+  border-radius: 15px 15px 0px 0px;
+  border: 1px solid #dddddd;
+}
+.bskp-bord-icon {
+  border: 1px solid #cbd5e4 !important;
+}
+.bskp-rightpanel .panel-heading > h4 > span {
+  font-size: 14px;
+  color: #2e2e2e !important;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.bskp-user-icon {
+  float: left;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 12px !important;
+}
+.bskp-rightpanel {
+  border-radius: 15px;
+}
+.bskp-rp-2 .nav > li > a {
+  color: #1a1a1a !important;
+}
+.bskp-rp-2 .nav > li > a > span {
+  text-decoration: underline grey !important;
+}
+.bskp-px-4 {
+  padding: 9px 25px;
+}
+@media (max-width: 1025px) {
+  .bskp-right-sec,
+  .bskp-main-sec {
+    flex: 0 0 100%;
+    max-width: 100% !important;
+  }
+}
+/* @media(max-width:1441px) and (min-width:426px){
+    .bskp-home-modules > p > label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 95px;
+    }
+} */
+
+/* @media (max-width: 768px){
+.header .navbar-right {
+    float: left!important;
+}
+} */
+
+@media (max-width: 426px) {
+  .bskp-rightpanel {
+    padding: 0px !important;
+  }
+  .bskp-main-sec {
+    padding: 0px !important;
+  }
+  .bskp-px-4 {
+    padding: 15px !important;
+  }
+  .bskp-dash-head {
+    margin: 3px !important;
+  }
+}
+
+/* ------- Homepage ends-------*/
+
+/* ------- Body-content -------*/
+.platformBody,
+.modal,
+.montFont {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.bskp-page-topic {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3e3e3e;
+  padding: 12px 30px;
+  border-bottom: 1px solid rgb(231 231 231 / 74%);
+  box-shadow: 0px 1px 3px 0px #d0cfcf9c;
+}
+
+.bskp-container-frame {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid rgb(193 193 193 / 74%);
+  box-shadow: 0px 1px 3px 1px #d0cfcf9c !important;
+  margin: 0px 25px;
+  z-index: 500 !important;
+}
+
+.bskp-align-icon {
+  align-items: center;
+  margin: 15px 30px 0px 0px;
+  font-size: 12px;
+}
+
+.bskp-btn-group-align {
+  column-gap: 14px;
+  margin-right: 20px;
+}
+
+.bskp-refreshbtn {
+  color: rgb(241, 241, 241) !important;
+  background: #90a1b7;
+  font-size: 16px !important;
+}
+
+.bskp-topic-icon {
+  height: 22px;
+  vertical-align: sub;
+}
+
+.bskp-icon-bg {
+  font-size: 14px !important;
+  color: #f9690e !important;
+  background: #eaf2f9;
+  margin-left: 8px;
+  border: 1px solid #dcebf7 !important;
+  line-height: 18px !important ;
+}
+
+.bskp-refresh-bg {
+  color: rgb(241, 241, 241) !important;
+  background: #90a1b7;
+  font-size: 16px;
+  padding: 6px 8px !important;
+  height: 32px !important;
+  border-radius: 10px !important;
+  font-weight: 600;
+  box-shadow: 0px 0px 2px 2px #e5e9f1 !important;
+}
+
+.bskp-btn-shadow {
+  padding: 5px 16px !important;
+  border-radius: 10px !important;
+  font-size: 14px;
+  height: 32px !important;
+  font-weight: 600;
+  box-shadow: 0px 0px 2px 2px #e5e9f1 !important;
+  /* margin-top: 10px;
+    margin-right: 1rem!important; */
+}
+
+.bskp-blue-bg {
+  background: #f9690e;
+  color: #ffffff !important;
+}
+
+.bskp-radius-btn {
+  font-size: 14px;
+  padding: 3px 7px !important;
+  height: 32px !important;
+  border-radius: 10px !important;
+  font-weight: 600;
+  box-shadow: 0px 0px 2px 2px #e5e9f1 !important;
+}
+
+.bskp-radius-btn img {
+  height: 16px;
+}
+
+.bskp-trash-btn {
+  padding: 0px 4px 3px 4px !important;
+  background: white;
+  border: 1px solid #f4a6c3;
+  border-radius: 6px !important;
+  box-shadow: 0px 0px 2px 2px #f4f4f4 !important;
+}
+
+.bskp-edit-btn {
+  padding: 0px 4px 3px 4px !important;
+  background: white;
+  border-radius: 6px !important;
+  border: 1px solid #bbc4d1;
+  box-shadow: 0px 0px 2px 2px #f4f4f4 !important;
+}
+
+.bskp-edit-btn img,
+.bskp-trash-btn img {
+  height: 16px !important;
+}
+
+/* Table */
+.bskp-table thead > tr > th,
+.bskp-table,
+.bskp-table tbody > tr > td {
+  border: none !important;
+}
+
+.bskp-table thead {
+  background: #edf1f7;
+  font-size: 14px;
+}
+
+.bskp-table tbody > tr {
+  border-bottom: 1px solid #dcdcdc !important;
+}
+
+.bskp-table-layout .pagination > .active > a {
+  background: #90a1b7 !important;
+  color: #fff;
+}
+
+.bskp-table-layout select {
+  /* Table-id_wrapper for table outer element  */
+  height: 26px !important;
+  border-radius: 6px !important;
+  padding: 3px;
+  width: 65px !important;
+}
+
+.bskp-table-layout {
+  padding: 0px 16px !important;
+}
+
+.bskp-table-layout .paginate_button a {
+  border: 1px solid #cbcaca !important;
+  padding: 3px 11px !important;
+}
+
+.bskp-table th:first-child {
+  border-radius: 7px 0px 0px 7px;
+  padding-left: 21px;
+}
+
+.bskp-table th:last-child {
+  border-radius: 0px 7px 7px 0px;
+  padding-right: 16px;
+}
+
+/* Table ends */
+
+/* Search input */
+
+.bskp-search-left input {
+  width: 350px !important;
+  height: 32px;
+  padding: 6px 32px 6px 30px;
+  font-size: 14px;
+  background: #f7fbfd;
+  margin: 0 !important;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.bskp-search-left i {
+  font-size: 12px;
+  position: absolute;
+  color: darkgray;
+  left: 10px;
+  top: 10px;
+}
+
+.bskp-search-left {
+  position: relative;
+  float: right !important;
+  margin-right: 14px;
+  margin-bottom: 30px;
+}
+
+/* Search input ends */
+
+/* ------- Body-content  ends-------*/
+
+/*  - Modal start - */
+.bskp-modal .modal-header {
+  border-bottom: 1px solid #cccc !important;
+  border-radius: 1rem 1rem 0rem 0rem !important;
+  padding: 14px 26px !important;
+  border: none !important;
+  box-shadow: 0px 1px 11px 0px #5a5a5a24;
+  background: white !important;
+}
+
+.bskp-modal ::placeholder {
+  opacity: 0.7;
+  /* Firefox */
+}
+
+.bskp-modal .modal-title {
+  color: black !important;
+}
+
+.bskp-modal .modal-content {
+  border-radius: 1rem !important;
+}
+
+.bskp-modal .close {
+  opacity: 0.8 !important;
+  outline: none !important;
+}
+
+.bskp-modal .close:hover {
+  opacity: 0.6 !important;
+}
+
+.bskp-modal .close i {
+  background: #90a1b7;
+  padding: 5.5px 8px;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.bskp-modal .modal-body {
+  padding: 15px 25px;
+}
+
+.bskp-modal input,
+.bskp-modal textarea,
+.bskp-modal select {
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+.bskp-modal label {
+  color: #171717;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.bskp-modal textarea {
+  min-height: 90px;
+}
+
+.bskp-modal tbody > tr:first-child > td {
+  padding: 20px !important;
+}
+
+.bskp-modal .modal-footer {
+  justify-content: center;
+}
+
+.bskp-modal .btn-proceed,
+.btn-proceed {
+  background-color: #f9690e;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  padding: 6px 30px;
+  box-shadow: 0px 0px 2px 2px #e5e9f1 !important;
+}
+
+.bskp-modal .btn-proceed i {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.bskp-modal .btn-close {
+  background-color: #90a1b7;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  padding: 6px 30px;
+  margin-right: 5px;
+  box-shadow: 0px 0px 2px 2px #e5e9f1 !important;
+}
+
+.bskp-modal button[disabled] {
+  opacity: 0.6;
+}
+
+/* .blur {
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);    
+} */
+.modal-backdrop {
+  background-color: #fefefeba !important;
+  opacity: 0.9 !important;
+}
+.bskp-btnsize {
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+  line-height: 30px;
+}
+.bskp-mm-search {
+  background: #f2f9ffc2 !important;
+  height: 32px !important;
+}
+.more-Hrecent,
+.more-Mrecent {
+  display: none;
+}
+.bskp-modal .modal-dialog {
+  min-height: calc(100vh - 60px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.bskp-modal .modal-dialog {
+  max-width: 800px;
+  margin: 1.75rem auto;
+}
+@media (max-width: 1024px) {
+  .bskp-modal .modal-dialog {
+    max-width: 85%;
+    margin: 1.75rem auto;
+  }
+}
+@media (max-width: 425px) {
+  .bskp-modal .modal-dialog {
+    max-width: 95%;
+    margin: 1.75rem auto;
+  }
+}
+/* - Modal end -*/
+
+/* - Mega-menu start -*/
+/* .modal.megafade .modal-dialog {
+    opacity:.0;
+    transition: opacity 0.8s ease-out;
+}
+.modal.megafade.show .modal-dialog {
+    opacity:1;
+    transition: opacity 0.8s ease-out;
+} */
+
+.bskp-angleR {
+  transform: rotate(182deg);
+}
+
+.bskp-fs-12 {
+  font-size: 12px !important;
+}
+.bskp-mm-fullwin {
+  font-size: 12px;
+  vertical-align: text-top;
+  margin-top: 2px;
+}
+.bskp-meganav span {
+  font-size: 12px;
+  color: #363636;
+  font-weight: 600;
+}
+.bskp-meganav .sub-menu a {
+  font-size: 12px;
+  color: #363636;
+  font-weight: 600;
+}
+.bskp-mt-30 {
+  margin-top: 30px;
+}
+.bskp-mega-nav {
+  padding: 7px 12px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 410px;
+}
+.searchcard {
+  font-size: 12px !important;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.bskp-bb {
+  padding-bottom: 4px;
+  border-bottom: 3px solid #f9690ebf;
+}
+.sideSub a {
+  color: #363636 !important;
+}
+.sidebar .bskp-mega-nav > li > a {
+  padding: 7px 0px !important;
+}
+.bskp-rad-10 {
+  border-radius: 10px !important;
+}
+.bskp-mega-nav b {
+  color: #2d377d;
+}
+.bskp-mega-head {
+  margin-top: 12px;
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+}
+.bskp-mega-modules .card {
+  margin-bottom: 10px !important;
+}
+.megacard .bskp-home-modules {
+  padding: 6px !important;
+  margin-bottom: 10px !important;
+}
+.megacard .cardtitle {
+  font-size: 12px !important;
+}
+.megacard .bskp-Dbg {
+  height: 20px !important;
+  width: 20px !important;
+}
+/* - Mega-menu end -*/
+
+/* - Submenu Start -*/
+.bskp-submenu li.active {
+  background-color: #90a1b7;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.bskp-submenu li.active > a {
+  color: white;
+}
+
+.bskp-submenu {
+  background-color: #ffffff !important;
+  height: 35px;
+  border-radius: 10px;
+  margin: 30px 38px 25px 38px !important;
+}
+
+.bskp-submenu li a {
+  color: rgb(0, 0, 0);
+}
+
+.bskp-submenu li {
+  line-height: 30px;
+  padding: 3px 15px;
+  border-right: 1px solid #e8e8e8;
+}
+
+.bskp-submenu li:first-child {
+  border-left: 1px solid #e8e8e8;
+}
+
+.bskp-submenu li a:hover {
+  text-decoration: none;
+  color: rgb(126, 126, 126) !important;
+}
+
+.bskp-submenu li.active a:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255) !important;
+}
+
+.bskp-submenu li:first-child > a > i {
+  font-size: 16px;
+  color: darkslategrey;
+}
+
+.bskp-submenu li:first-child > a:hover > i {
+  font-size: 16px;
+  color: rgb(132, 132, 132);
+}
+
+/* - Submenu end -*/
+
+.bskp-raw-mesg label {
+  font-size: 14px;
+}
+
+.bskp-raw-mesg select,
+.bskp-raw-mesg input,
+.bskp-raw-mesg #reportrange {
+  border-radius: 10px !important;
+  height: 30px !important;
+}
+/*  */
+.bskp-sidenav span {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+.barwidth {
+  width: 250px !important;
+}
+
+.sidebar .nav > li > a i {
+  color: #f9690e !important;
+}
+
+/* Home-page ICONS */
+.bskp-Dbg {
+  background-color: #f9690e;
+  height: 38px;
+  width: 38px;
+}
+.bskp-home-modules:hover .bskp-Dbg {
+  background-color: white;
+}
+
+/* Home-page Icons start */
+.bskp-Dimg1 {
+  mask: url(images/menu/market-place.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/market-place.svg) no-repeat center / contain;
+}
+.bskp-Dimg2 {
+  mask: url(images/menu/library.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/library.svg) no-repeat center / contain;
+}
+.bskp-Dimg3 {
+  mask: url(images/menu/message-definition_1-bskp.svg) no-repeat center /
+    contain;
+  -webkit-mask: url(images/menu/message-definition_1-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg4 {
+  mask: url(images/menu/sql-table.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/sql-table.svg) no-repeat center / contain;
+}
+.bskp-Dimg5 {
+  mask: url(images/menu/db-table.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/db-table.svg) no-repeat center / contain;
+}
+.bskp-Dimg6 {
+  mask: url(images/menu/mongodb.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/mongodb.svg) no-repeat center / contain;
+}
+.bskp-Dimg7 {
+  mask: url(images/menu/widgets-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/widgets-bskp.svg) no-repeat center / contain;
+}
+.bskp-Dimg8 {
+  mask: url(images/menu/record-definition-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/record-definition-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg9 {
+  mask: url(images/menu/dsql-temp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/dsql-temp.svg) no-repeat center / contain;
+}
+.bskp-Dimg10 {
+  mask: url(images/menu/db-templates.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/db-templates.svg) no-repeat center / contain;
+}
+.bskp-Dimg11 {
+  mask: url(images/menu/hardware-fanta_1-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/hardware-fanta_1-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg12 {
+  mask: url(images/menu/folder.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/folder.svg) no-repeat center / contain;
+}
+.bskp-Dimg13 {
+  mask: url(images/menu/dashboard-editor.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/dashboard-editor.svg) no-repeat center / contain;
+}
+.bskp-Dimg14 {
+  mask: url(images/menu/events&notifications-bskp.svg) no-repeat center /
+    contain;
+  -webkit-mask: url(images/menu/events&notifications-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg15 {
+  mask: url(images/menu/sql-query.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/sql-query.svg) no-repeat center / contain;
+}
+.bskp-Dimg16 {
+  mask: url(images/menu/db-query.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/db-query.svg) no-repeat center / contain;
+}
+.bskp-Dimg17 {
+  mask: url(images/menu/assets-management-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/assets-management-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg18 {
+  mask: url(images/menu/event-log.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/event-log.svg) no-repeat center / contain;
+}
+.bskp-Dimg19 {
+  mask: url(images/menu/mobile.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/mobile.svg) no-repeat center / contain;
+}
+.bskp-Dimg20 {
+  mask: url(images/menu/script-console-fanta-bskp.svg) no-repeat center /
+    contain;
+  -webkit-mask: url(images/menu/script-console-fanta-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg21 {
+  mask: url(images/menu/messages.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/messages.svg) no-repeat center / contain;
+}
+.bskp-Dimg22 {
+  mask: url(images/menu/mongodb-query.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/mongodb-query.svg) no-repeat center / contain;
+}
+.bskp-Dimg23 {
+  mask: url(images/menu/firmware-management-fanta-bskp.svg) no-repeat center /
+    contain;
+  -webkit-mask: url(images/menu/firmware-management-fanta-bskp.svg) no-repeat
+    center / contain;
+}
+.bskp-Dimg24 {
+  mask: url(images/menu/app-log.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/app-log.svg) no-repeat center / contain;
+}
+.bskp-Dimg25 {
+  mask: url(images/menu/rules-engine-fanta-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/rules-engine-fanta-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg26 {
+  mask: url(images/menu/search-console.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/search-console.svg) no-repeat center / contain;
+}
+.bskp-Dimg27 {
+  mask: url(images/menu/templates-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/templates-bskp.svg) no-repeat center / contain;
+}
+.bskp-Dimg28 {
+  mask: url(images/menu/cassandra.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/cassandra.svg) no-repeat center / contain;
+}
+.bskp-Dimg29 {
+  mask: url(images/menu/geofence-fanta-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/geofence-fanta-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg30 {
+  mask: url(images/menu/user-management-fanta-bskp.svg) no-repeat center /
+    contain;
+  -webkit-mask: url(images/menu/user-management-fanta-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg31 {
+  mask: url(images/menu/machine-learning-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/machine-learning-bskp.svg) no-repeat center /
+    contain;
+}
+.bskp-Dimg32 {
+  mask: url(images/menu/goggle-mic.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/goggle-mic.svg) no-repeat center / contain;
+}
+.bskp-Dimg33 {
+  mask: url(images/menu/amaz-mic.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/amaz-mic.svg) no-repeat center / contain;
+}
+.bskp-Dimg34 {
+  mask: url(images/menu/code-editor.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/code-editor.svg) no-repeat center / contain;
+}
+.bskp-Dimg35 {
+  mask: url(images/menu/templates-bskp.svg) no-repeat center / contain;
+  -webkit-mask: url(images/menu/templates-bskp.svg) no-repeat center / contain;
+}
+/* Home-page Icons ends */
+
+/* Mega-menu start */
+.bskp-w-100 {
+  width: 100% !important;
+}
+
+/* Mega-menu end */
+
+/* View Toggle Raw-Message  */
+/* container for all of the switch elements 
+    - adjust "width" to fit the content accordingly 
+*/
+.raw-message .switches-container {
+  border: 1px solid rgb(213, 213, 213);
+  position: relative;
+  display: flex;
+  padding: 0;
+  position: relative;
+  background: white;
+  line-height: 30px;
+  border-radius: 8px;
+}
+
+/* input (radio) for toggling. hidden - use labels for clicking on */
+.raw-message .switches-container input {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+/* labels for the input (radio) boxes - something to click on */
+.raw-message .switches-container label {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(63, 63, 63);
+}
+
+/* switch highlighters wrapper (sliding left / right) 
+    - need wrapper to enable the even margins around the highlight box
+*/
+.raw-message .switch-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 3;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  /* transition: transform 1s; */
+}
+
+/* switch box highlighter */
+.raw-message .switch {
+  border-radius: 6px;
+  background: #f9690e;
+  height: 100%;
+  font-weight: 500;
+}
+
+/* switch box labels
+    - default setup
+    - toggle afterwards based on radio:checked status 
+*/
+.raw-message .switch div {
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  display: block;
+  font-weight: 600;
+  color: white;
+  transition: opacity 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.125s;
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* slide the switch box from right to left */
+.raw-message
+  .switches-container
+  input:nth-of-type(1):checked
+  ~ .switch-wrapper {
+  transform: translateX(0%);
+}
+
+/* slide the switch box from left to right */
+.raw-message
+  .switches-container
+  input:nth-of-type(2):checked
+  ~ .switch-wrapper {
+  transform: translateX(100%);
+}
+
+/* toggle the switch box labels - first checkbox:checked - show first switch div */
+.raw-message
+  .switches-container
+  input:nth-of-type(1):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/* toggle the switch box labels - second checkbox:checked - show second switch div */
+.raw-message
+  .switches-container
+  input:nth-of-type(2):checked
+  ~ .switch-wrapper
+  .switch
+  div:nth-of-type(2) {
+  opacity: 1;
+}
+.raw-message .switches-container {
+  max-width: 280px;
+}
+.btn-bskp {
+  color: white;
+  background: #f9690e;
+}
+/* button:hover {
+    opacity: .9;
+    cursor: pointer;
+    border: none; 
+}*/
+input[type="file"] {
+  font-size: 12px !important;
+}
+
+.spinner-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.panel-title {
+  font-size: 14px;
+}
+.breadcrumb > li a {
+  color: #525252;
+}
+.bskp-plusvg {
+  height: 18px;
+  vertical-align: middle;
+}
+.bskp-expand {
+  height: 16px;
+}
+.bskp-headbtn {
+  color: #f9690e !important;
+  background: white !important;
+}
+.minus-none {
+  display: none;
+}

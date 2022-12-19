@@ -1,0 +1,96 @@
+<footer class="footer" style="background: white">
+  <div class="container-fluid" style="padding: 0px 35px">
+    <p
+      class="text-muted mt-1 font-weight-bold"
+      style="font-size: 12px; color: rgb(117 117 117) !important"
+    >
+      &copy; <span class="currentYear"></span>. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<div
+  id="privacyModal"
+  class="modal bskp-modal fade"
+  tabindex="-1"
+  role="dialog"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">We have updated the Privacy & Policy</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          A change in our
+          <a href="https://boodskap.io/privacy-policy" target="_blank"
+            >Privacy Policy</a
+          >
+          takes effect from May 24, 2018. Please read them carefully and
+          proceed. Thanks for using Boodskap IoT Platform!
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btnModal" onclick="proceedPrivacy()">
+          Accept & Continue
+        </button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div
+  id="domainNameModal"
+  class="modal bskp-modal fade"
+  tabindex="-1"
+  role="dialog"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          <i class="icon-globe"></i> Domain Information
+        </h4>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <form action="javascript:void(0)" onsubmit="saveDomainName()">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Domain Name</label> <br />
+                <input
+                  type="text"
+                  id="domainName"
+                  class="form-control input-sm"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="btn btnModal btn-secondary btn-proceed btnSubmit"
+          >
+            Save & Continue
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
