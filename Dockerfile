@@ -3,16 +3,14 @@ LABEL maintainer="Boodskap <platform@boodskap.io>"
 
 RUN npm install -g express
 
-ENV BOODSKAPUI_HOME=/opt/boodskapui
+ENV APP_HOME=/opt/smart-parking-system
 
-RUN mkdir -p ${BOODSKAPUI_HOME}/logs
+RUN mkdir -p ${APP_HOME}/logs
 
-WORKDIR ${BOODSKAPUI_HOME}
+WORKDIR ${APP_HOME}
 
-COPY / ${BOODSKAPUI_HOME}/
+COPY / ${APP_HOME}/
 
-RUN ls -la ${BOODSKAPUI_HOME}/
+EXPOSE 10091
 
-EXPOSE 4201
-
-ENTRYPOINT node boodskap-platform-node.js
+CMD exec node smart-vehicle-parking-node.js
