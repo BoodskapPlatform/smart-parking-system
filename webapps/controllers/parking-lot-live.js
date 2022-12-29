@@ -1,5 +1,6 @@
 let parking_lots = [];
 let garage_arr_list = [];
+let selected_garage_id = null;
 let max_lot_size = 5500;
 
 $(document).ready(function () {
@@ -27,6 +28,10 @@ function parkingReducer(action) {
 
     case "reset":
       resetParkingLots();
+      break;
+
+    case "refresh":
+      window.location.reload();
       break;
 
     case "calc":
@@ -73,7 +78,7 @@ function parkingReducer(action) {
 function getGarageList() {
 
   let slug = DOMAIN_KEY.toLowerCase();
-  let api = "GarageServices/list";
+  let api = "Parking/garages";
   let method = "post";
   let key = "";
   let token = USER_OBJ["token"];
@@ -81,7 +86,7 @@ function getGarageList() {
     authType: "TOKEN",
   };
   let data = {
-    domain_key: DOMAIN_KEY,
+    
   };
   loading();
   executeMicroAPI(
@@ -94,11 +99,9 @@ function getGarageList() {
     obj,
     async (status, result) => {
       closeLoading();
-      // console.log("result----------------");
-      // console.log(result);
-      let data = await searchQueryFormatter(result);
+      // let data = await searchQueryFormatterNew(result);
       if (status) {
-        garage_arr_list = data["data"]["data"];
+        garage_arr_list = result["values"];
         renderSelect(garage_arr_list, "garageLoader");
       }
     }
@@ -108,7 +111,7 @@ function getGarageList() {
 function getParkingLotsList() {
     
   let slug = DOMAIN_KEY.toLowerCase();
-  let api = "ParkingLotServices/list";
+  let api = "Parking/lots";
   let method = "post";
   let key = "";
   let token = USER_OBJ["token"];
@@ -117,9 +120,7 @@ function getParkingLotsList() {
   };
 
   let data = {
-    domain_key : DOMAIN_KEY,
-    garage_id : $("#garageLoader").val(),
-    garage_name : $("#garageLoader option:selected").text()
+    garage : $("#garageLoader option:selected").text()
   };
 
   loading();
@@ -133,13 +134,11 @@ function getParkingLotsList() {
     token,
     obj,
     async (status, result) => {
-      // console.log("result---------");
-      // console.log(result);
+     
       closeLoading();
-      let data = await searchQueryFormatter(result);
 
       if (status) {
-        parking_lots = data["data"]["data"];
+        parking_lots = result["values"];
         if (parking_lots.length > 0) {
             parkingReducer("render-list");
         }
@@ -156,8 +155,8 @@ function renderSelect(list, id) {
     let parkingHtml = ``;
 
     for (let i = 0; i < list.length; i++) {
-      if (list[i]["garage_name"]) {
-        parkingHtml += `<option value="` +list[i]["_id"] +`">` +list[i]["garage_name"] +`</option>`;
+      if (list[i]["garage"]) {
+        parkingHtml += `<option value="` +list[i]["_id"] +`">` +list[i]["garage"] +`</option>`;
       }
     }
 
@@ -208,9 +207,9 @@ function createGarage() {
         let token = USER_OBJ["token"];
 
         let inputObj = {
-            single_row_lots: parseInt($("#each_row_parking_lots").val()),
-            garage_name: $.trim($("#garageName").val()),
-            parking_row: parseInt($("#total_no_rows").val()),
+            cols: parseInt($("#each_row_parking_lots").val()),
+            garage: $.trim($("#garageName").val()),
+            rows: parseInt($("#total_no_rows").val()),
             total_lots: each_row_parking_lots * total_no_rows,
             img: "",
             single_lot_breath: parseInt($("#parkLotWidth").val()),
@@ -296,31 +295,32 @@ function parkingSetup() {
   parkingCalc();
 }
 
-function renderParkingList() {
+async function renderParkingList(){
 
     let oneRow = "";
     let all_park_arr = [];
     let garage_obj = {};
 
     for(let z=0;z<garage_arr_list.length;z++){
-        if(garage_arr_list[z]["_id"] === $("#garageLoader").val()){
+        if(garage_arr_list[z]["_id"] === $("#garageLoader option:selected").val()){
             garage_obj = garage_arr_list[z];
         }
     }
 
-    if(garage_obj.parking_row > 0 && garage_obj.single_row_lots > 0){
+    if(garage_obj.rows > 0 && garage_obj.cols > 0){
         
         let rowArr = [];
         let parking_no = 1;
 
-        for(let y=1;y<=garage_obj.parking_row;y++){
+        for(let y=1;y<=garage_obj.rows;y++){
             let colArr = [];
-            for(let x=1;x<=garage_obj.single_row_lots;x++){
-                let lid="ROW"+y+"COL"+x;
-                let ob = _.find(parking_lots, function (o) { return o.lot_sid === lid; })
+            for(let x=1;x<=garage_obj.cols;x++){
+                let lid= "ROW"+y+"COL"+x;
+                let ob = await _.find(parking_lots, function (o) { return o.lot === lid; })
                 let carColors = ["yellow", "blue", "white", "red"];
                 let carImg = carColors[Math.floor(Math.random() * carColors.length)];
 
+                ob["garage"] = garage_obj["garage"];
                 ob["parking_no"] = parking_no;
                 ob["status"] = "sp-occupying";
                 ob["img"] = carImg;
@@ -352,7 +352,7 @@ function renderParkingList() {
             let onePark = all_park_arr[i][j];
             // let wdt = "width:"+domWidth;
 
-            let g_uniq_nam = onePark["garage_name"].replaceAll(" ","_");
+            let g_uniq_nam = onePark["garage"].replaceAll(" ","_");
             let distance = Math.round(
               parseInt(onePark["distance"]) / (max_lot_size / 100)
             );
@@ -378,10 +378,10 @@ function renderParkingList() {
             }
             
             oneRow +=
-              `<div class="sp-slot-one-area garage_`+g_uniq_nam+`" id="lot_`+g_uniq_nam+`_` +onePark["lot_sid"]+`">
+              `<div class="sp-slot-one-area garage_`+g_uniq_nam+`" id="lot_`+g_uniq_nam+`_` +onePark["lot"]+`">
                    <div class="sp-slot-label"><i class="fa fa-circle sp-occupying"></i> Lot ` +onePark["parking_no"] +`</div>
                    <div class="sp-lots lot-area `+park_alert+`" style="position:relative;">
-                      <img class="sp-vehicle-img" style="`+vehicle_vis+`top:`+distance+`%;" id="parkedVehicle_`+g_uniq_nam+`_`+onePark["lot_sid"] +`" src="images/cars/` +onePark["img"] +`-car.png">
+                      <img class="sp-vehicle-img" style="`+vehicle_vis+`top:`+distance+`%;" id="parkedVehicle_`+g_uniq_nam+`_`+onePark["lot"] +`" src="images/cars/` +onePark["img"] +`-car.png">
                    </div>
               </div>`;
           }
@@ -393,7 +393,6 @@ function renderParkingList() {
     }
 }
 
-
 function resetParkingLots() {
   removeLocStrg("parking_lot");
   removeLocStrg("parking_setup");
@@ -404,9 +403,6 @@ function resetParkingLots() {
 }
 
 function lotStatusUpdate(payload) {
-
-  // console.log("lotStatusUpdate----------");
-  // console.log(payload);
 
   let g_uniq_nam = payload["garage"].replaceAll(" ","_");
   let distance = Math.round(
@@ -462,20 +458,19 @@ function mqttListen() {
       var parsedData = JSON.parse(message.payloadString);
       var topicName = message.destinationName;
       
-      if (topicName === "/OWESYRSXNE/log/mrule/100000") {
+      if (topicName === "/"+DOMAIN_KEY+"/log/mrule/100") {
         if (parsedData["data"] != "__ALL_DONE__") {
-          
-          let lotObj = JSON.parse(parsedData.data);
-          // console.log("lotObj------------");
-          // console.log(lotObj);
-          let obj = {
-            garage: lotObj.garage,
-            gwid: lotObj.deviceid,
-            lot: lotObj.lot,
-            distance: lotObj.distance,
-          };
+          try{
+            let lotObj = JSON.parse(parsedData.data);
+            let obj = {
+              garage: lotObj.garage,
+              gwid: lotObj.deviceid,
+              lot: lotObj.lot,
+              distance: lotObj.distance,
+            };
 
-          lotStatusUpdate(obj);
+            lotStatusUpdate(obj);
+          }catch(e){}
         }
       }
     };

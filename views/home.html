@@ -22,11 +22,14 @@
             <h1 class="page-header fw-900" style="margin:0 0 3px;font-weight: 900;"> Live Dashboard</h1>
         </div>
         <div class="col-lg-6">
-            <button type="button" style="margin-left: 10px;" class="btn btn-background btn-sm pull-right" onclick="parkingReducer('setup')">
+            <!-- <button type="button" style="margin-left: 10px;" class="btn btn-background btn-sm pull-right" onclick="parkingReducer('setup')">
                 <i class="fa fa-plus"></i> Create Garage
             </button>
             <button type="button" style="margin-left: 10px;" class="btn btn-background btn-sm parking-delete-btn pull-right d-none" onclick="parkingReducer('delete-garage')">
                 <i class="fa fa-trash"></i> Delete
+            </button> -->
+            <button type="button" style="margin-left: 10px;" class="btn btn-background btn-sm pull-right" onclick="parkingReducer('refresh')">
+                <i class="fa fa-refresh"></i> Refresh
             </button>
             <select class="custom-select pull-right d-none" onchange="parkingReducer('list-lots')"
             style="width: 250px; display: inline-block; vertical-align: top;" id="garageLoader"></select>

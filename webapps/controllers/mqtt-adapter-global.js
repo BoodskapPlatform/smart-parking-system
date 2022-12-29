@@ -1,6 +1,13 @@
 var MQTT_GLOBAL_STATUS = false;
 var mqtt_global_client = null;
 
+if(Cookies.get('mqttConnCount')){
+    let mqttConnCount = parseInt(Cookies.get('mqttConnCount'));
+    Cookies.set('mqttConnCount', mqttConnCount+1);
+}else{
+    Cookies.set('mqttConnCount', 1);
+}
+
 function connectionStatusGlobal() {
     return MQTT_GLOBAL_STATUS;
 }
@@ -28,6 +35,7 @@ function mqttConnectGlobal() {
             // mqttConnectGlobal();
             if(message.errorMessage.includes('bad user name or password') || message.errorMessage.includes('rejected') || message.errorMessage.includes('error')){
                 console.log('Bad username and password! Please reload the page')
+
                 // Cookies.remove('user_details');
                 // document.location = BASE_PATH+'/login';
             }else{
@@ -36,11 +44,14 @@ function mqttConnectGlobal() {
         }
     };
 
-    options['userName'] = MQTT_CLIENT_ID + '_' + API_TOKEN;
-    // options['userName'] = MQTT_CLIENT_ID + '_' + USER_OBJ.domainKey;
-    options['password'] = USER_OBJ.apiKey;
+    options['userName'] = "-";
+    options['password'] = "-";
 
-    var sessionClientId = MQTT_CLIENT_ID + '_' + new Date().getTime();
+    var randomId = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+    var sessionClientId = API_TOKEN+":"+randomId;
+    
+    // var sessionClientId = MQTT_CLIENT_ID + '_' + new Date().getTime();
+    // var sessionClientId = API_TOKEN;
 
     if (MQTT_CONFIG.portNo) {
         mqtt_global_client = new Messaging.Client(MQTT_CONFIG.hostName, MQTT_CONFIG.portNo, sessionClientId);
@@ -86,4 +97,3 @@ function mqttUnsubscribeGlobal(topic) {
     });
 
 }
-

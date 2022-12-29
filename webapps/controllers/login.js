@@ -9,16 +9,7 @@ $(document).ready(function () {
         userObj = JSON.parse(userObj);
 
         if(Cookies.get('partDomain') !== 'false') {
-
-            if (USER_ROLE.indexOf('user') !== -1) {
-                document.location = BASE_PATH+'/dashboard';
-            } 
-            // else if (roles.indexOf('domainadmin') !== -1) {
-            //     document.location = BASE_PATH+'/statistics-dashboard';
-            // } 
-            else {
-                document.location = BASE_PATH+'/home';
-            }
+            document.location = BASE_PATH+'/home';
         }else{
             loadPartDomain()
         }
@@ -102,16 +93,7 @@ function login(){
                 Cookies.set('partDomain', false);
                 loadPartDomain();
             } else {
-
-                if (roles.indexOf('user') !== -1) {
-                    document.location = BASE_PATH+'/dashboard';
-                }
-                //  else if (roles.indexOf('domainadmin') !== -1) {
-                //     document.location = BASE_PATH+'/statistics-dashboard';
-                // }
-                 else {
-                    document.location = BASE_PATH+'/home';
-                }
+                document.location = BASE_PATH+'/home';
             }
 
         }else{
@@ -141,21 +123,10 @@ function loadPartDomain() {
 function switchDomain(dkey,token) {
     switchDomainCall(dkey,token,function (status, data) {
         if(status){
-
             Cookies.set('user_details', data);
-
             Cookies.set('partDomain',true);
 
-            userObj = data;
-
-            var roles = userObj.user.roles;
-
-            if(roles.indexOf('user') !== -1){
-                document.location = BASE_PATH+'/dashboard';
-            }else{
-                document.location = BASE_PATH+'/home';
-            }
-
+            document.location = BASE_PATH+'/home';
         }else{
             errorMsg('Something went wrong!')
         }
@@ -192,9 +163,6 @@ function register(){
     // var password = $("#password").val();
     // var confirmpassword = $("#confirmpassword").val();
     var captchaStatus = grecaptcha.getResponse();
-
-    console.log("captchaStatus-----------");
-    console.log(typeof captchaStatus);
 
     if(firstname == ""){
         errorMsgBorder('First Name cannot be empty','firstname',1);

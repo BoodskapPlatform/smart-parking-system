@@ -48,10 +48,11 @@ function mqttConnect() {
         }
     };
 
-    options['userName'] = MQTT_CLIENT_ID + '_' + API_TOKEN;
-    options['password'] = USER_OBJ.apiKey;
+    options['userName'] = "-";
+    options['password'] = "-";
 
-    var sessionClientId = MQTT_CLIENT_ID + '_' + new Date().getTime();
+    var randomId = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+    var sessionClientId = API_TOKEN+":"+randomId;
 
     if (MQTT_CONFIG.portNo) {
         mqtt_client = new Messaging.Client(MQTT_CONFIG.hostName, MQTT_CONFIG.portNo, sessionClientId);
@@ -106,4 +107,3 @@ function mqttUnsubscribe(topic) {
     });
 
 }
-

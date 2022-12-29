@@ -25,7 +25,9 @@ Routes.prototype.init = function () {
                 req.session.userObj = JSON.parse(userObj);
                 req.session.role = role[0].toUpperCase();
 
-                if (role.indexOf('admin') !== -1 || role.indexOf('domainadmin') !== -1) {
+                next();
+
+                /* if (role.indexOf('admin') !== -1 || role.indexOf('domainadmin') !== -1) {
                     next();
                 } else {
                     if (role.indexOf('user') !== -1) {
@@ -51,7 +53,7 @@ Routes.prototype.init = function () {
                             res.sendStatus(401)
                         }
                     }
-                }
+                } */
             } else {
                 res.redirect(self.app.conf.basepath+'/login');
             }
@@ -64,11 +66,13 @@ Routes.prototype.init = function () {
             var role = JSON.parse(userObj).user.roles;
             req.session.userObj = JSON.parse(userObj);
 
-            if (role.indexOf('user') !== -1) {
+            /* if (role.indexOf('user') !== -1) {
                 res.redirect(self.app.conf.basepath+'/dashboard');
             } else {
                 res.redirect(self.app.conf.basepath+'/home');
-            }
+            } */
+
+            res.redirect(self.app.conf.basepath+'/home');
 
         }else{
             res.redirect(self.app.conf.basepath+'/login');
@@ -81,11 +85,13 @@ Routes.prototype.init = function () {
                 var role = JSON.parse(userObj).user.roles;
                 req.session.userObj = JSON.parse(userObj);
 
-                if (role.indexOf('user') !== -1) {
+                /* if (role.indexOf('user') !== -1) {
                     res.redirect(self.app.conf.basepath+'/dashboard');
                 } else {
                     res.redirect(self.app.conf.basepath+'/home');
-                }
+                } */
+
+                res.redirect(self.app.conf.basepath+'/home');
             }else{
                 res.render('login.html', {layout:false,basepath: getBasePath(req),key:''});
             }
