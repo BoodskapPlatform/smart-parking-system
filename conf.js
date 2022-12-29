@@ -1,1 +1,1 @@
-module.exports = {"web":{"port":4201},"basepath":"","protocol":"http" }
+module.exports = {"web":{"port":10091},"basepath":"/parking","protocol":"https","api":"https://dev.boodskap.io/api","development":true}
