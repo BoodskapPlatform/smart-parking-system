@@ -82,7 +82,6 @@ function login(){
             userObj = data;
 
             var roles = data.user.roles;
-            console.log();
             if(roles.indexOf('user') === -1 && roles.indexOf('developer') === -1 && roles.indexOf('domainadmin') === -1 && roles.indexOf('admin') === -1) {
                 data.user.roles = ['user'];
                 roles = ['user'];

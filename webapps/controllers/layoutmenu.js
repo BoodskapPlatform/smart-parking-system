@@ -40,7 +40,7 @@ $(document).ready(function () {
         loadUserProfilePicture();
         loadLogoPicture();
         geThemeProperty();
-        checkPrivacyPolicy();
+        // checkPrivacyPolicy();
         restrictAccess();
         mqttConnectGlobal();
         checkDomainSQLAccess();
