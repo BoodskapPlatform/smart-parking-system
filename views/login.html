@@ -54,7 +54,7 @@
     </script>
 
 
-    <link href="images/favicon.ico" rel="icon">
+    <link href="images/parking-logo.png" rel="icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
     <link href="css/jquery-ui.min.css" rel="stylesheet"/>
     <link href="css/style.min.css" rel="stylesheet"/>
@@ -123,9 +123,9 @@
                     </div>
                     <div class="pl-4 w-100 header-option">
                         <span class="d-flex justify-content-end">
-                        <a href="https://developer.boodskap.io/" class="px-2 anchor-text text-center justify-content-center login-ref">Demo</a>
-                        <a href="https://dev.boodskap.io/platform/swagger-doc/" class="px-2 anchor-text text-center justify-content-center login-ref">Help</a>
-                        <a href="https://www.youtube.com/channel/UC1yOEmlV7mBfKI1aHSMk3GQ" class="ps-2 anchor-text text-center justify-content-center login-ref">Support 24/7</a>
+                            <a href="https://calendly.com/boodskap/demo" class="px-2 anchor-text text-center justify-content-center login-ref">Demo</a>
+                            <a href="https://developer.boodskap.io/" class="px-2 anchor-text text-center justify-content-center login-ref">Help</a>
+                            <a href="https://boodskap.io/contact-us" class="ps-2 anchor-text text-center justify-content-center login-ref">Support 24/7</a>
                         </span>
                     </div>
                 </div>
@@ -144,33 +144,28 @@
                         </div>
                         <div class="wrap-input">
                             <input type="password" class="input-text" id="password" placeholder="Password" required/>
-                            <!-- <img id="eye" src="images/hide.png" width="20px" alt="eye" style="position: absolute;right: 1px;top: 0px;"/> -->
-                            <!-- <span class="" data-placeholder=""></span> -->
                             <i onclick="toggleBox()" class="fa fa-eye form-control-feedback passwordIcon icon-position" style="position: absolute;right: 1px;top: 6px;"></i>
                             <div id="logpassword"></div>
                         </div>
-                            <div class="checkbox checkbox-css pt-1" style="line-height: 25px;">         <!--  -->
+
+                        <!-- <div class="checkbox checkbox-css pt-1" style="line-height: 25px;">         
                             <input type="checkbox" id="remember_me_checkbox" value=""/>
                             <label for="remember_me_checkbox"  style="color: #000;font-weight: 500; font-size:14px;">
                                 Remember Me
                             </label>
                             <p style="float: right;">
-                                <!-- <a href="javascript:void(0)" onclick="resetPasswordModal()" class="text-decoration-none text-color">Forgot
-                                    Password?</a> -->
                                 <a href="<%= basepath %>/forgotpassword" class="text-decoration-none text-color text-size">Forgot
                                     Password?</a>
                             </p>
-                        </div>
-                        <div class="login-buttons pt-4">
-                            <button type="submit" class="btn btn-background btn-size fw-bold fs-6 d-grid  col-8 mx-auto" id="submitButton">Login
-                            </button>
-                            
-                        </div>
+                        </div> -->
 
-                    
-                        <div class="d-flex pt-4 justify-content-center" style="font-size:14px">
-                            Don't have an account? <a href="" class="text-decoration-none fw-bold text-color">&nbsp;&nbsp;Sign up</a>
+                        <div class="login-buttons pt-4">
+                            <button type="submit" class="btn btn-background btn-size fw-bold fs-6 d-grid  col-8 mx-auto" id="submitButton">Login</button>
                         </div>
+                    
+                        <!-- <div class="d-flex pt-4 justify-content-center" style="font-size:14px">
+                            Don't have an account? <a href="" class="text-decoration-none fw-bold text-color">&nbsp;&nbsp;Sign up</a>
+                        </div> -->
 
                         <div>
                             <p class="mt-3 pt-5 text-center">
@@ -180,14 +175,9 @@
                                         Policy</a>
                                 </small>
                             </p>
+
                             <p class="text-center text-grey-darker mb-0"style="font-size: 10px;color:#836e6e !important;">
                                 &copy; <span class="currentYear"></span> All rights reserved.
-                                <!-- <a href="https://boodskap.io" target="_blank" class="text-warning textColor poweredBy"></a> -->
-                            </p>
-                            <p class="text-center" style="color:#836e6e;font-size: 10px;" >
-                                Dashboard Version: <b><span  class="webVersion"style="font-weight: 400;"></span></b>
-                            <span style="color:#836e6e;font-size: 10px;" >|</span> Platform Version: <b><span class="platformVersion"style="font-weight: 400;"></span></b>
-                                <!-- <span style="color:#ccc">|</span> Platform Version: <b><span class="apiVersion"></span></b> -->
                             </p>
 
                             <p class="text-center" style="color:#836e6e;font-size: 10px;" >

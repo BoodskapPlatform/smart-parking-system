@@ -1,17 +1,6 @@
 var switchColor = '#9E9E9E';
 var LIVE_UPDATE_GLOBAL = Cookies.get('live_update_global') ? Cookies.get('live_update_global') : 'OFF';
 
-var userEventMenu = ' <li class="has-sub sideMain">\n' +
-    '        <a href="'+WEB_BASE_PATH+'/userevents">\n' +
-    '            <i class="icon-bell4"></i>\n' +
-    '            <span>Event Subscriptions</span>\n' +
-    '        </a>\n' +
-    '        <a href="'+WEB_BASE_PATH+'/alexa">\n' +
-    '            <i class="icon-microphone"></i>\n' +
-    '            <span>Amazon Alexa</span>\n' +
-    '        </a>\n' +
-    '        </li>'
-
 $(document).ready(function () {
 
     $(".poweredBy").attr('src',DEFAULT_POWERED_BY);
@@ -41,7 +30,6 @@ $(document).ready(function () {
         loadLogoPicture();
         geThemeProperty();
         // checkPrivacyPolicy();
-        restrictAccess();
         mqttConnectGlobal();
         checkDomainSQLAccess();
         checkDomainDBAccess();
@@ -56,51 +44,7 @@ $(document).ready(function () {
     }
 
     $(".rightSideBarPanel").css('height',$(window).height());
-
-
-    //Cookie & Tab
-    /*if (+Cookies.get('tabs') > 0)
-        alert('Already open!');
-    else
-        Cookies.set('tabs', 0);
-
-    Cookies.set('tabs', +Cookies.get('tabs') + 1);
-
-    window.onunload = function () {
-        Cookies.set('tabs', +Cookies.get('tabs') - 1);
-    };
-
-
-    var tabID = sessionStorage.tabID && sessionStorage.closedLastTab !== '2' ? sessionStorage.tabID : sessionStorage.tabID = Math.random();
-    sessionStorage.closedLastTab = '2';
-    $(window).on('unload beforeunload', function() {
-        sessionStorage.closedLastTab = '1';
-    });*/
-
 });
-
-function restrictAccess() {
-
-    if (USER_ROLE.indexOf('admin') === -1){
-        $(".adminMenu").remove();
-    }
-
-
-
-    if (USER_ROLE.indexOf('admin') === -1 && USER_ROLE.indexOf('domainadmin') === -1 && USER_ROLE.indexOf('developer') === -1) {
-        // $(".barmenu").removeAttr('onclick');
-        // $(".domain_logo").removeAttr('onclick');
-        $(".menulink").remove();
-
-        $(".sidenav ul").html('<li class="has-sub active sideMain homeMenu">'+
-        '<a href="'+WEB_BASE_PATH+'/dashboard">'+
-        '<i class="fa fa-home"></i>'+
-        '<span>Home</span>'+
-        '</a>'+
-        '</li>'+userEventMenu);
-
-    }
-}
 
 function removeCookies() {
     Cookies.remove('user_details');
@@ -131,12 +75,9 @@ function logout() {
         }
 
     });
-
-
 }
 
 function checkPrivacyPolicy() {
-
 
     if (!Cookies.get(PRIVACY_POLICY)) {
 
