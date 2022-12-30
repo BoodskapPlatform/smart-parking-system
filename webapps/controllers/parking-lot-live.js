@@ -376,9 +376,21 @@ async function renderParkingList(){
               vehicle_vis = 'display:none;';
               park_alert = '';
             }
+
+            var startTime = moment(onePark.updated_time);
+            var endTime = moment(new Date().getTime());
+            
+            var duration = moment.duration(endTime.diff(startTime));
+            // duration in hours
+            var hours = parseInt(duration.asHours());
+            
+            // duration in minutes
+            var minutes = parseInt(duration.asMinutes()) % 60;
+            let final_res = hours + ' hr ' + minutes + ' m';
             
             oneRow +=
               `<div class="sp-slot-one-area garage_`+g_uniq_nam+`" id="lot_`+g_uniq_nam+`_` +onePark["lot"]+`">
+                   <div class="sp-slot-timer" title="Vehicle Parking Duration : `+final_res+`"><i class="fa fa-clock-o"></i> `+final_res+` </div>
                    <div class="sp-slot-label"><i class="fa fa-circle sp-occupying"></i> Lot ` +onePark["parking_no"] +`</div>
                    <div class="sp-lots lot-area `+park_alert+`" style="position:relative;">
                       <img class="sp-vehicle-img" style="`+vehicle_vis+`top:`+distance+`%;" id="parkedVehicle_`+g_uniq_nam+`_`+onePark["lot"] +`" src="images/cars/` +onePark["img"] +`-car.png">

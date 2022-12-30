@@ -21,10 +21,22 @@
   /* display: none; */
   z-index: 1;
 }
+.sp-slot-timer{
+    font-size: 11px;
+    white-space: nowrap;
+    border-radius: 5px 5px 0px 0px;
+    background: #676767;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-weight: 600;
+    width: 80px;
+    margin: 0 auto;
+    text-align: center;
+}
 .sp-slot-label{
     padding: 4px 12px;
     background: #c5d1d9;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 0px;
     font-weight: 600;
     color: #666666;
     font-size: 12px;
