@@ -77,7 +77,6 @@ async.series({
 
         let platform_config = {
             web: getProperty('web.domain'),
-            showcase_url: getProperty('web.showcase_url'),
             basepath : BASE_PATH,
             api: getProperty('boodskap.api'),
             development : getProperty("env.development"),
