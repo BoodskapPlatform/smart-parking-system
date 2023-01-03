@@ -14,6 +14,10 @@ Routes.prototype.init = function () {
         return self.app.conf.protocol+"://"+req.headers.host+""+self.app.conf.basepath
     }
 
+    var getHostPath = function (req) {
+        return self.app.conf.protocol+"://"+req.headers.host
+    }
+
     var roleCheck = function (req, res, next) {
         var userObj = req.cookies['user_details'];
         var partDomain = req.cookies['partDomain'];
@@ -50,22 +54,22 @@ Routes.prototype.init = function () {
                 req.session.userObj = JSON.parse(userObj);
                 res.redirect(self.app.conf.basepath+'/home');
             }else{
-                res.render('login.html', {layout:false,basepath: getBasePath(req),key:''});
+                res.render('login.html', {layout:false,basepath: getBasePath(req),hostpath: getHostPath(req),key:''});
             }
     });
 
     self.router.get('/home', roleCheck,function (req, res) {
-        res.render('home.html',{layout:'',basepath: getBasePath(req), userRole:req.session.role, response : ''});
+        res.render('home.html',{layout:'',basepath: getBasePath(req),hostpath: getHostPath(req), userRole:req.session.role, response : ''});
     });
 
     self.router.get('/404', roleCheck,function (req, res) {
-        res.render('404.html',{layout:'',basepath: getBasePath(req), userRole:req.session.role});
+        res.render('404.html',{layout:'',basepath: getBasePath(req),hostpath: getHostPath(req), userRole:req.session.role});
     });
 
     self.router.get('/:key', function (req, res) {
         var userObj = req.cookies['user_details'];
         if(!userObj) {
-            res.render('login.html',{layout:false,basepath: getBasePath(req),key:req.params['key']});
+            res.render('login.html',{layout:false,basepath: getBasePath(req),hostpath: getHostPath(req),key:req.params['key']});
 
         }else{
             res.redirect(getBasePath(req)+"/404");
