@@ -16,6 +16,7 @@
     <div class="sidebar" style="width: 250px;">
         <ul class="nav" style="margin-bottom: 50px">
             <li class="has-sub active sideMain homeMenu">
+                
                 <a href="<%= basepath %>/home">
                     <i class="fa fa-tachometer"></i>
                     <span>Live Dashboard</span>
@@ -24,3 +25,12 @@
         </ul>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $(".homeMenu").prepend(`<a href="`+SHOWCASE_URL+`">
+                    <i class="fa fa-th"></i>
+                    <span>Showcase Home</span>
+                </a>`);
+    })
+</script>
