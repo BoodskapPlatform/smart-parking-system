@@ -9,6 +9,7 @@ var CDN_PATH =  CONFIG.cdnPath;
 var ENV = CONFIG.development ? CONFIG.development : false;
 var BASE_PATH = CONFIG.basepath;
 var SHOWCASE_URL = $("#hostpath").val() ? $("#hostpath").val() : "https://showcase.boodskap.io";
+let API_TOKEN_ALT = "-";
 
 if(CONFIG.development){
     API_BASE_PATH = CONFIG.api;
