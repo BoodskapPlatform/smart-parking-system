@@ -8,7 +8,7 @@ var WEB_VERSION = '5.0.16-alpha';
 var CDN_PATH =  CONFIG.cdnPath;
 var ENV = CONFIG.development ? CONFIG.development : false;
 var BASE_PATH = CONFIG.basepath;
-var SHOWCASE_URL = CONFIG.showcase_url ? CONFIG.showcase_url : "";
+var SHOWCASE_URL = CONFIG.showcase_url ? CONFIG.showcase_url : "https://showcase.boodskap.io";
 
 if(CONFIG.development){
     API_BASE_PATH = CONFIG.api;
